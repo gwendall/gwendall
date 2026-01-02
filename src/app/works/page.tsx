@@ -20,7 +20,7 @@ export default function Works() {
         </div>
         <h1 className="font-bold mb-2">ALL WORKS</h1>
         <p className="text-zinc-500">
-          Complete chronological list of projects & experiments (including unreleased works).
+          Complete list of projects & experiments (unreleased included).
         </p>
       </header>
 
