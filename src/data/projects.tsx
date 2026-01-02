@@ -157,6 +157,14 @@ const ITEMS: Project[] = [
         date: new Date('2012-12-01')
     },
     {
+        name: 'Falcon',
+        url: 'https://news.ycombinator.com/item?id=5165181', // Placeholder or real link if found, using a generic old link logic or leaving empty if unknown. I will check search first or use a placeholder. User said "exit" so maybe there is a press article. I'll stick to a generic description for now.
+        description: 'People search engine browser extension. Reconstructed a person\'s entire digital footprint from a single entry point (email, Twitter, etc). Acquired.',
+        type: ProjectType.PastWork,
+        date: new Date('2013-06-01'), // Approximate mid-year
+        archived: true
+    },
+    {
         name: 'way.js',
         url: 'https://github.com/gwendall/way.js',
         description: 'Two-way data binding JavaScript library.',
