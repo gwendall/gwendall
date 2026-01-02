@@ -90,7 +90,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1905662132915490850"
         ],
-        type: ProjectType.PastWork,
+        type: ProjectType.OngoingExperiments,
         date: new Date('2025-03-01')
     },
     {
