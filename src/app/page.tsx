@@ -41,25 +41,28 @@ export default function Home() {
         </p>
       </header>
 
-      <div className="space-y-12">
+      <div className="flex flex-col gap-12">
         <Section title={ProjectTypeLabels[ProjectType.CurrentWork]} items={currentWork} />
         <Section title={ProjectTypeLabels[ProjectType.OngoingExperiments]} items={ongoingExperiments} />
-        <Section 
-          title={ProjectTypeLabels[ProjectType.PastWork]} 
-          items={pastWork}
-          description="Earlier work and shipped experiments."
-        />
+        
+        <div>
+          <Section 
+            title={ProjectTypeLabels[ProjectType.PastWork]} 
+            items={pastWork}
+            description="Earlier work and shipped experiments."
+          />
+          <div className="text-zinc-400 text-xs mt-6">
+            <Link href="/works" className="hover:text-zinc-600 hover:underline">
+              View All Works →
+            </Link>
+          </div>
+        </div>
+
         <Section 
           title="Talks & Exhibitions" 
           items={talksAndExhibitions} 
           description="I regularly speak about AI agents, avatars, and the convergence of physical and digital systems."
         />
-        
-        <div className="pt-12 text-zinc-400 text-xs">
-          <Link href="/works" className="hover:text-zinc-600 hover:underline">
-            View All Works →
-          </Link>
-        </div>
       </div>
     </main>
   );
