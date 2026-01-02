@@ -219,6 +219,14 @@ const ITEMS: Project[] = [
         date: new Date('2023-03-14')
     },
     {
+        name: 'ANOTHER.CAM',
+        url: 'https://another.cam',
+        description: 'Style transfer camera app with presets (Ghibli, Simpson, etc).',
+        type: ProjectType.PastWork,
+        date: new Date('2025-03-01'),
+        archived: true,
+    },
+    {
         name: 'Hotline',
         url: 'https://hotline.fm',
         logo: 'https://hotline.fm/logo.png',
