@@ -182,6 +182,27 @@ const PROJECTS: Project[] = [
 
 export const EXHIBITIONS: Exhibition[] = [
     {
+        name: 'The future of AI Agents, Spatial Computing and NPCs',
+        url: 'https://www.youtube.com/watch?v=eqMUsjLFNtM',
+        description: 'Talk at NFC Summit, Lisbon.',
+        date: new Date('2024-06-01'),
+        type: 'Talk'
+    },
+    {
+        name: 'Digital Identity systems and the evolution of avatars',
+        url: 'https://www.youtube.com/watch?v=O8SH-yZNUDI',
+        description: 'Talk at Metaverse Summit, Paris.',
+        date: new Date('2023-10-01'),
+        type: 'Talk'
+    },
+    {
+        name: 'The convergence of physical and digital worlds',
+        url: 'https://www.youtube.com/watch?v=-0QMNDDCF9k',
+        description: 'Talk at EthCC, Paris.',
+        date: new Date('2022-07-01'),
+        type: 'Talk'
+    },
+    {
         name: '"London Calling" Exhibition',
         url: 'https://avant-galerie.com/london-calling',
         description: 'Digital art exhibition at Avant Galerie Vossen, Paris.',
