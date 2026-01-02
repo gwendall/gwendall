@@ -85,7 +85,7 @@ export default function Home() {
           </Link>
           , or email me at{" "}
           <a 
-            href="mailto:hi@gwendall.com" 
+            href="mailto:hi@gwendall.com?subject=Hello" 
             className="text-link hover:underline font-bold"
           >
             hi@gwendall.com
