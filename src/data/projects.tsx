@@ -65,6 +65,16 @@ const ITEMS: Project[] = [
         date: new Date('2025-03-01')
     },
     {
+        name: 'Nexus.JS',
+        url: 'https://punk.cam/lab/nexus',
+        description: 'Lightweight 2D/3D interaction system built with Three.js.',
+        tweets: [
+            "https://x.com/gwendall/status/1934654618669068704"
+        ],
+        type: 'Past Work',
+        date: new Date('2025-06-15')
+    },
+    {
         name: 'SuperClaude',
         url: 'https://github.com/gwendall/superclaude',
         description: 'AI commit message generator.',
@@ -139,6 +149,17 @@ const ITEMS: Project[] = [
         ],
         type: 'Past Work',
         date: new Date('2021-08-21')
+    },
+    {
+        name: 'Side Events',
+        url: 'https://side.events',
+        logo: 'https://pbs.twimg.com/profile_images/1628369893434220546/txjF12jM_400x400.jpg',
+        description: 'Crypto event discovery platform.',
+        tweets: [
+            "https://x.com/gwendall/status/1538550321294856199"
+        ],
+        type: 'Past Work',
+        date: new Date('2022-06-19')
     },
     {
         name: 'Flinks',
