@@ -107,12 +107,26 @@ const ITEMS: Project[] = [
         date: new Date('2025-06-15')
     },
     {
+        name: 'PunkMap',
+        url: 'https://punkmap.com',
+        description: 'Token-gated directory for CryptoPunks. Privacy-focused map showing members\' locations and occupations, accessible only to holders.',
+        type: ProjectType.PastWork,
+        date: new Date('2025-07-01')
+    },
+    {
         name: 'Fashion AI',
         url: 'https://fashion-ai-eight.vercel.app/',
         description: 'Photo-based outfit identifier and style analysis tool.',
         type: ProjectType.PastWork,
         date: new Date('2025-09-01'), // Approximate date
         archived: true
+    },
+    {
+        name: 'Super Looter',
+        url: 'https://superlooter.vercel.app',
+        description: 'Retro-gaming scanner. Extracts game info from photos to compare in-store prices with eBay Japan (just needed it for myself while travelling).',
+        type: ProjectType.PastWork,
+        date: new Date('2025-11-01')
     },
     {
         name: 'DOS.Chat',
