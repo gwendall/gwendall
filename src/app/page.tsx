@@ -78,7 +78,8 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 className="font-bold text-zinc-600 mb-6 text-xs tracking-wider">TALKS & EXHIBITIONS</h2>
+          <h2 className="font-bold text-zinc-600 mb-2 text-xs tracking-wider">TALKS & EXHIBITIONS</h2>
+          <p className="text-zinc-500 mb-6">I regularly speak about AI agents, avatars, and the convergence of physical and digital systems.</p>
           <ul className="space-y-6">
             {EXHIBITIONS.sort((a, b) => b.date.getTime() - a.date.getTime()).map((item) => (
               <li key={item.name}>
