@@ -1,5 +1,6 @@
 import ITEMS, { Project, ProjectType, ProjectTypeLabels } from "@/data/projects";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 function Section({ title, items, description }: { title: string; items: Project[]; description?: string }) {
   const visibleItems = items.filter(item => !item.hidden);
@@ -19,7 +20,7 @@ function Section({ title, items, description }: { title: string; items: Project[
         {visibleItems.sort((a, b) => b.date.getTime() - a.date.getTime()).map((item) => (
           <li key={item.name}>
             <article className="flex flex-col">
-              <div>
+              <div className="flex items-center">
                 <Link 
                   href={item.url} 
                   target="_blank"
@@ -27,27 +28,25 @@ function Section({ title, items, description }: { title: string; items: Project[
                 >
                   {item.name}
                 </Link>
-                <span className="text-black tabular-nums mr-4">
+                <span className="text-black tabular-nums">
                   {new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" })
                     .format(item.date)
                     .toUpperCase()}
                 </span>
+                {item.tweets && item.tweets.length > 0 && (
+                  <Link
+                    href={item.tweets[0]}
+                    target="_blank"
+                    className="inline-flex items-center justify-center ml-2 text-zinc-400 hover:text-zinc-600 transition-colors"
+                    title="View Tweet"
+                  >
+                    <ArrowUpRight size={16} />
+                  </Link>
+                )}
               </div>
               
               <div className="text-zinc-700">
                 {item.description}
-                {item.tweets && item.tweets.length > 0 && (
-                  <>
-                    {" "}
-                    <Link
-                      href={item.tweets[0]}
-                      target="_blank"
-                      className="text-link hover:underline"
-                    >
-                      [TWEET]
-                    </Link>
-                  </>
-                )}
               </div>
             </article>
           </li>
