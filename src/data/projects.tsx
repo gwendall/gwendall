@@ -83,7 +83,7 @@ const ITEMS: Project[] = [
     {
         name: 'Nexus.JS',
         url: 'https://punk.cam/lab/nexus',
-        description: 'Lightweight 2D/3D interaction system built with Three.js.',
+        description: 'Lightweight 2D/3D interaction system for browser-based editors and spatial interfaces.',
         tweets: [
             "https://x.com/gwendall/status/1934654618669068704"
         ],
