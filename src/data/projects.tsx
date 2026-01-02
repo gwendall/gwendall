@@ -11,7 +11,7 @@ export enum ProjectType {
 export const ProjectTypeLabels: Record<ProjectType, string> = {
     [ProjectType.CurrentWork]: "Current Work",
     [ProjectType.OngoingExperiments]: "Ongoing Experiments",
-    [ProjectType.PastWork]: "Past Work",
+    [ProjectType.PastWork]: "Selected Past Work",
     [ProjectType.Exhibition]: "Exhibition",
     [ProjectType.Talk]: "Talk"
 };
