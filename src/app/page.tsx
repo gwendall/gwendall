@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen max-w-2xl mx-auto px-6 py-20 font-mono leading-6">
+    <main className="min-h-screen max-w-2xl mx-auto px-6 py-12 font-mono leading-6">
       <header className="mb-12">
         <h1 className="font-bold mb-2">GWENDALL</h1>
         <p className="text-zinc-500">
