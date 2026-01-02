@@ -123,6 +123,15 @@ const ITEMS: Project[] = [
         archived: true
     },
     {
+        name: 'PunkPool',
+        url: 'https://punkpool.io',
+        description: 'Protocol for group purchases of a CryptoPunk. Shared ownership and rights management.',
+        type: ProjectType.PastWork,
+        date: new Date('2025-09-01'),
+        archived: true,
+        hidden: true
+    },
+    {
         name: 'Super Looter',
         url: 'https://superlooter.vercel.app',
         description: 'Retro-gaming scanner. Extracts game info from photos to compare in-store prices with eBay Japan (just needed it for myself while travelling).',
