@@ -40,15 +40,15 @@ export default function Home() {
             {PROJECTS.sort((a, b) => (b.launchDate?.getTime() || 0) - (a.launchDate?.getTime() || 0)).map((project) => (
               <li key={project.name}>
                 <article className="flex flex-col">
-                  <div className="flex items-baseline gap-4">
+                  <div>
                     <Link 
                       href={project.url} 
                       target="_blank"
-                      className="font-bold text-link hover:underline uppercase tracking-wide"
+                      className="font-bold text-link hover:underline uppercase tracking-wide mr-4"
                     >
                       {project.name}
                     </Link>
-                    <span className="text-black tabular-nums">
+                    <span className="text-black tabular-nums mr-4">
                       {project.launchDate ? (
                         new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" })
                           .format(project.launchDate)
@@ -84,11 +84,11 @@ export default function Home() {
             {EXHIBITIONS.sort((a, b) => b.date.getTime() - a.date.getTime()).map((item) => (
               <li key={item.name}>
                 <article className="flex flex-col">
-                  <div className="flex items-baseline gap-4">
+                  <div>
                     <Link 
                       href={item.url} 
                       target="_blank"
-                      className="font-bold text-link hover:underline uppercase tracking-wide"
+                      className="font-bold text-link hover:underline uppercase tracking-wide mr-4"
                     >
                       {item.name}
                     </Link>
