@@ -37,13 +37,13 @@ const PROJECTS: Project[] = [
     {
         name: 'meeb.cam',
         url: 'https://meeb.cam',
-        description: 'Digital avatar platform that brings virtual characters to life.',
+        description: 'Digital avatar studio.',
         launchDate: new Date('2025-02-01')
     },
     {
         name: 'SuperClaude',
         url: 'https://github.com/gwendall/superclaude',
-        description: 'AI-powered Git commit message generator.',
+        description: 'AI commit message generator.',
         launchDate: new Date('2025-06-01')
     },
     {
@@ -66,7 +66,7 @@ const PROJECTS: Project[] = [
         name: 'PUNK.CAM Virtual Camera',
         url: 'https://punk.cam/extension',
         logo: 'https://pbs.twimg.com/profile_images/1833456434182324224/UnK1Zn71_400x400.jpg',
-        description: 'Virtual camera to wear digital avatars during video calls.',
+        description: 'Wearable digital avatars for video calls.',
         tweets: [
             "https://x.com/gwendall/status/1877018396845383991",
         ],
@@ -86,7 +86,7 @@ const PROJECTS: Project[] = [
         name: 'PUNK.CAM',
         url: 'https://punk.cam',
         logo: 'https://punk.cam/logo.png',
-        description: 'Cross-platform digital identity system.',
+        description: 'CryptoPunk identity camera.',
         tweets: [
             "https://x.com/gwendall/status/1707853803536716041",
             // "https://x.com/gwendall/status/1464003154702385153"
