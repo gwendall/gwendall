@@ -1,4 +1,4 @@
-import ITEMS from "@/data/projects";
+import ITEMS, { ProjectType } from "@/data/projects";
 import Link from "next/link";
 import { ProjectList } from "@/app/components/ProjectList";
 
@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default function Works() {
-  const allWorks = ITEMS.filter(item => !item.hidden);
+  const allWorks = ITEMS.filter(item => !item.hidden && item.type !== ProjectType.Talk && item.type !== ProjectType.Exhibition);
 
   return (
     <main className="min-h-screen max-w-2xl mx-auto px-6 py-12 font-mono leading-6">

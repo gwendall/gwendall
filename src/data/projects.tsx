@@ -84,7 +84,7 @@ const ITEMS: Project[] = [
         ],
         type: ProjectType.PastWork,
         date: new Date('2025-01-08'),
-        hidden: true
+        archived: true
     },
     {
         name: 'VibeWorld',
@@ -111,7 +111,8 @@ const ITEMS: Project[] = [
         url: 'https://github.com/gwendall/superclaude',
         description: 'AI commit message generator.',
         type: ProjectType.PastWork,
-        date: new Date('2025-06-01')
+        date: new Date('2025-06-01'),
+        archived: true
     },
     {
         name: 'TechList',
@@ -191,7 +192,8 @@ const ITEMS: Project[] = [
             "https://x.com/gwendall/status/1538550321294856199"
         ],
         type: ProjectType.PastWork,
-        date: new Date('2022-06-19')
+        date: new Date('2022-06-19'),
+        archived: true,
     },
     {
         name: 'Flinks',
@@ -202,7 +204,8 @@ const ITEMS: Project[] = [
             "https://x.com/gwendall/status/1806329360791560300"
         ],
         type: ProjectType.PastWork,
-        date: new Date('2024-06-27')
+        date: new Date('2024-06-27'),
+        archived: true,
     },
     {
         name: 'AnyChat',
@@ -221,7 +224,8 @@ const ITEMS: Project[] = [
         logo: 'https://hotline.fm/logo.png',
         description: 'Character-driven AI chat platform.',
         type: ProjectType.PastWork,
-        date: new Date('2023-08-07')
+        date: new Date('2023-08-07'),
+        archived: true,
     },
     {
         name: 'Banger.fm',
