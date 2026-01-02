@@ -117,7 +117,7 @@ const ITEMS: Project[] = [
         url: 'https://www.latribune.fr/blogs/tendances-web/20121203trib000734854/une-carte-de-paris-pour-reperer-les-start-up.html',
         description: (
             <div>
-                Interactive map of Paris tech ecosystem. Gave birth to the <a href="https://lafrenchtech.gouv.fr/" target="_blank" rel="noreferrer" className="text-link hover:underline"> French Tech label</a> movement.
+                Interactive map of Paris tech ecosystem. Early catalyst for the “<a href="https://lafrenchtech.gouv.fr/" target="_blank" rel="noreferrer" className="text-link hover:underline"> French Tech</a>” movement.
             </div>
         ),
         type: ProjectType.PastWork,
@@ -152,7 +152,7 @@ const ITEMS: Project[] = [
         name: 'PunkMaker',
         url: 'https://punkmaker.xyz',
         logo: 'https://punkmaker.xyz/logo.png',
-        description: 'CryptoPunk avatar generator.',
+        description: 'CryptoPunk remix and avatar generator.',
         tweets: [
             "https://x.com/gwendall/status/1714972677570445540"
         ],
@@ -163,7 +163,7 @@ const ITEMS: Project[] = [
         name: 'Metahood',
         url: 'https://metahood.xyz',
         logo: 'https://pbs.twimg.com/profile_images/1613845233136959488/Sl4TG6ZV_400x400.jpg',
-        description: 'Virtual real estate marketplace. Backed by institutional investors.',
+        description: 'Virtual real estate marketplace. VC-backed.',
         tweets: [
             "https://x.com/gwendall/status/1615746051608137729"
         ],
@@ -196,7 +196,7 @@ const ITEMS: Project[] = [
         name: 'Flinks',
         url: 'https://flinks.gg',
         logo: 'https://flinks.gg/logo.png',
-        description: 'Farcaster frames integration for Twitter.',
+        description: 'Social sharing tool for decentralized networks.',
         tweets: [
             "https://x.com/gwendall/status/1806329360791560300"
         ],
@@ -218,7 +218,7 @@ const ITEMS: Project[] = [
         name: 'Hotline',
         url: 'https://hotline.fm',
         logo: 'https://hotline.fm/logo.png',
-        description: 'AI celebrity conversation platform.',
+        description: 'Character-driven AI chat platform.',
         type: ProjectType.PastWork,
         date: new Date('2023-08-07')
     },
@@ -226,7 +226,7 @@ const ITEMS: Project[] = [
         name: 'Banger.fm',
         url: 'https://banger.fm',
         logo: 'https://banger.fm/logo.png',
-        description: 'AI music generation engine.',
+        description: 'AI-generated music player and curated playlists.',
         tweets: [
             "https://x.com/gwendall/status/1661742156976099329"
         ],
