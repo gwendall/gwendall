@@ -113,11 +113,11 @@ const ITEMS: Project[] = [
         date: new Date('2025-06-01')
     },
     {
-        name: 'ParisTechList',
+        name: 'TechList',
         url: 'https://www.latribune.fr/blogs/tendances-web/20121203trib000734854/une-carte-de-paris-pour-reperer-les-start-up.html',
         description: (
             <div>
-                Interactive map of Paris tech ecosystem. Early catalyst for the “<a href="https://lafrenchtech.gouv.fr/" target="_blank" rel="noreferrer" className="text-link hover:underline"> French Tech</a>” movement.
+                Interactive map of French tech ecosystem. Early catalyst for the “<a href="https://lafrenchtech.gouv.fr/" target="_blank" rel="noreferrer" className="text-link hover:underline">French Tech</a>” movement.
             </div>
         ),
         type: ProjectType.PastWork,
