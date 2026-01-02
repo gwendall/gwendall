@@ -11,6 +11,15 @@ export type Project = {
     launchDate?: Date;
 };
 
+export type Exhibition = {
+    name: string;
+    url: string;
+    description: string;
+    date: Date;
+    type: "Exhibition" | "Talk";
+    location?: string;
+}
+
 const PROJECTS: Project[] = [
     {
         name: 'kami.bot',
@@ -27,13 +36,6 @@ const PROJECTS: Project[] = [
             "https://x.com/gwendall/status/1905662132915490850"
         ]
     },
-    // {
-    //     name: 'EXO.FM',
-    //     url: 'https://exo.fm',
-    //     description: 'Social AI agentic framework.',
-    //     isUpcoming: true,
-    //     launchDate: new Date('2025-08-01')
-    // },
     {
         name: 'meeb.cam',
         url: 'https://meeb.cam',
@@ -176,6 +178,16 @@ const PROJECTS: Project[] = [
         ],
         launchDate: new Date('2023-05-25')
     },
+];
+
+export const EXHIBITIONS: Exhibition[] = [
+    {
+        name: '"London Calling" Exhibition',
+        url: 'https://avant-galerie.com/london-calling',
+        description: 'Digital art exhibition at Avant Galerie Vossen, Paris.',
+        date: new Date('2024-01-13'),
+        type: 'Exhibition'
+    }
 ];
 
 export default PROJECTS;
