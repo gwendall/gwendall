@@ -24,7 +24,7 @@ const PROJECTS: Project[] = [
     {
         name: 'kami.bot',
         url: 'https://kami.bot',
-        description: 'Embodied agent experiments.',
+        description: 'Embodied agent experiments across digital and physical environments.',
         launchDate: new Date('2026-01-01')
     },
     {
