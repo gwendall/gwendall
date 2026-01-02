@@ -163,7 +163,7 @@ const ITEMS: Project[] = [
         name: 'Metahood',
         url: 'https://metahood.xyz',
         logo: 'https://pbs.twimg.com/profile_images/1613845233136959488/Sl4TG6ZV_400x400.jpg',
-        description: 'Virtual real estate marketplace.',
+        description: 'Virtual real estate marketplace. Backed by institutional investors.',
         tweets: [
             "https://x.com/gwendall/status/1615746051608137729"
         ],
