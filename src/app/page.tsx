@@ -7,7 +7,7 @@ function Section({ title, items, description }: { title: string; items: Project[
   return (
     <section>
       <div className="flex items-center gap-2 mb-2">
-        <div className="w-2 h-2 bg-zinc-900" />
+        <div className="w-2.5 h-2.5 bg-zinc-600 -translate-y-[0.5px]" />
         <h2 className="font-bold text-zinc-600 text-xs tracking-wider uppercase">{title}</h2>
       </div>
       {description && (
