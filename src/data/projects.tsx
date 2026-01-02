@@ -107,6 +107,14 @@ const ITEMS: Project[] = [
         date: new Date('2025-06-15')
     },
     {
+        name: 'Fashion AI',
+        url: 'https://fashion-ai-eight.vercel.app/',
+        description: 'Photo-based outfit identifier and style analysis tool.',
+        type: ProjectType.PastWork,
+        date: new Date('2025-09-01'), // Approximate date
+        archived: true
+    },
+    {
         name: 'SuperClaude',
         url: 'https://github.com/gwendall/superclaude',
         description: 'AI commit message generator.',
