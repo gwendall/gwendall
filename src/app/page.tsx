@@ -57,19 +57,22 @@ export default function Home() {
                         "WIP"
                       )}
                     </span>
-                    {project.tweets && project.tweets.length > 0 && (
-                      <Link
-                        href={project.tweets[0]}
-                        target="_blank"
-                        className="text-link hover:underline"
-                      >
-                        TWEET
-                      </Link>
-                    )}
                   </div>
                   
                   <div className="text-zinc-700">
                     {project.description}
+                    {project.tweets && project.tweets.length > 0 && (
+                      <>
+                        {" "}
+                        <Link
+                          href={project.tweets[0]}
+                          target="_blank"
+                          className="text-link hover:underline"
+                        >
+                          [TWEET]
+                        </Link>
+                      </>
+                    )}
                   </div>
                 </article>
               </li>
