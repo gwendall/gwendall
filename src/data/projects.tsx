@@ -1,6 +1,6 @@
 import React from "react";
 
-export type ProjectType = "Current Work" | "Past Work" | "Exhibition" | "Talk";
+export type ProjectType = "Current Work" | "Ongoing Experiments" | "Past Work" | "Exhibition" | "Talk";
 
 export type Project = {
     name: string;
@@ -28,8 +28,24 @@ const ITEMS: Project[] = [
         url: 'https://meeb.cam',
         description: 'Digital avatar studio.',
         type: 'Current Work',
-        date: new Date('2025-02-01')
+        date: new Date('2025-02-01'),
+        tweets: [
+            "https://x.com/gwendall/status/1891486845873148088"
+        ]
     },
+
+    // Ongoing Experiments
+    {
+        name: 'NakedPunks',
+        url: 'https://nakedpunks.app',
+        description: 'Ongoing exploration of full-body pixel avatars with generative appearance & behaviors - initially inspired by CryptoPunks.',
+        tweets: [
+            "https://x.com/punksOTC/status/1957417802278502572"
+        ],
+        type: 'Ongoing Experiments',
+        date: new Date('2024-01-01')
+    },
+
     {
         name: 'PUNK.CAM',
         url: 'https://punk.cam',

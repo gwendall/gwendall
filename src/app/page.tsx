@@ -57,6 +57,7 @@ function Section({ title, items, description }: { title: string; items: Project[
 
 export default function Home() {
   const currentWork = ITEMS.filter(item => item.type === 'Current Work');
+  const ongoingExperiments = ITEMS.filter(item => item.type === 'Ongoing Experiments');
   const pastWork = ITEMS.filter(item => item.type === 'Past Work');
   const talksAndExhibitions = ITEMS.filter(item => item.type === 'Talk' || item.type === 'Exhibition');
 
@@ -93,6 +94,7 @@ export default function Home() {
 
       <div className="space-y-12">
         <Section title="Current Work" items={currentWork} />
+        <Section title="Ongoing Experiments" items={ongoingExperiments} />
         <Section title="Past Work" items={pastWork} />
         <Section 
           title="Talks & Exhibitions" 
