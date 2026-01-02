@@ -97,7 +97,11 @@ export default function Home() {
       <div className="space-y-12">
         <Section title={ProjectTypeLabels[ProjectType.CurrentWork]} items={currentWork} />
         <Section title={ProjectTypeLabels[ProjectType.OngoingExperiments]} items={ongoingExperiments} />
-        <Section title={ProjectTypeLabels[ProjectType.PastWork]} items={pastWork} />
+        <Section 
+          title={ProjectTypeLabels[ProjectType.PastWork]} 
+          items={pastWork}
+          description="Earlier work and shipped experiments."
+        />
         <Section 
           title="Talks & Exhibitions" 
           items={talksAndExhibitions} 
