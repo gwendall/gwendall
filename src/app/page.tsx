@@ -1,66 +1,14 @@
-import ITEMS, { Project, ProjectType, ProjectTypeLabels } from "@/data/projects";
+import ITEMS, { ProjectType, ProjectTypeLabels } from "@/data/projects";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-
-function Section({ title, items, description }: { title: string; items: Project[]; description?: string }) {
-  const visibleItems = items.filter(item => !item.hidden);
-  
-  if (visibleItems.length === 0) return null;
-
-  return (
-    <section>
-      <div className="flex items-center gap-2 mb-2">
-        <div className="w-2.5 h-2.5 bg-zinc-400 -translate-y-[0.5px]" />
-        <h2 className="font-bold text-zinc-600 text-xs tracking-wider uppercase">{title}</h2>
-      </div>
-      {description && (
-        <p className="text-zinc-500 mb-6">{description}</p>
-      )}
-      <ul className={description ? "space-y-6" : "space-y-6 mt-6"}>
-        {visibleItems.sort((a, b) => b.date.getTime() - a.date.getTime()).map((item) => (
-          <li key={item.name}>
-            <article className="flex flex-col">
-              <div className="flex items-center">
-                <Link 
-                  href={item.url} 
-                  target="_blank"
-                  className="font-bold text-link hover:underline uppercase tracking-wide mr-4"
-                >
-                  {item.name}
-                </Link>
-                <span className="text-black tabular-nums">
-                  {new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" })
-                    .format(item.date)
-                    .toUpperCase()}
-                </span>
-                {item.tweets && item.tweets.length > 0 && (
-                  <Link
-                    href={item.tweets[0]}
-                    target="_blank"
-                    className="inline-flex items-center justify-center ml-2 text-zinc-400 hover:text-zinc-600 transition-colors"
-                    title="View Tweet"
-                  >
-                    <ArrowUpRight size={16} />
-                  </Link>
-                )}
-              </div>
-              
-              <div className="text-zinc-700">
-                {item.description}
-              </div>
-            </article>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
+import { Section } from "./components/ProjectList";
 
 export default function Home() {
-  const currentWork = ITEMS.filter(item => item.type === ProjectType.CurrentWork);
-  const ongoingExperiments = ITEMS.filter(item => item.type === ProjectType.OngoingExperiments);
-  const pastWork = ITEMS.filter(item => item.type === ProjectType.PastWork);
-  const talksAndExhibitions = ITEMS.filter(item => item.type === ProjectType.Talk || item.type === ProjectType.Exhibition);
+  const visibleItems = ITEMS.filter(item => !item.hidden && !item.archived);
+  
+  const currentWork = visibleItems.filter(item => item.type === ProjectType.CurrentWork);
+  const ongoingExperiments = visibleItems.filter(item => item.type === ProjectType.OngoingExperiments);
+  const pastWork = visibleItems.filter(item => item.type === ProjectType.PastWork);
+  const talksAndExhibitions = visibleItems.filter(item => item.type === ProjectType.Talk || item.type === ProjectType.Exhibition);
 
   return (
     <main className="min-h-screen max-w-2xl mx-auto px-6 py-12 font-mono leading-6">
@@ -106,6 +54,12 @@ export default function Home() {
           items={talksAndExhibitions} 
           description="I regularly speak about AI agents, avatars, and the convergence of physical and digital systems."
         />
+        
+        <div className="pt-12 text-zinc-400 text-xs">
+          <Link href="/works" className="hover:text-zinc-600 hover:underline">
+            View All Works →
+          </Link>
+        </div>
       </div>
     </main>
   );

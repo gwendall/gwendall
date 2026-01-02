@@ -27,6 +27,7 @@ export type Project = {
     isDiscontinued?: boolean; // Kept for potential future use or migration
     isUpcoming?: boolean; // Kept for potential future use or migration
     hidden?: boolean;
+    archived?: boolean; // Hidden from home, but visible on /works
 };
 
 const ITEMS: Project[] = [
