@@ -126,7 +126,8 @@ const ITEMS: Project[] = [
         url: 'https://superlooter.vercel.app',
         description: 'Retro-gaming scanner. Extracts game info from photos to compare in-store prices with eBay Japan (just needed it for myself while travelling).',
         type: ProjectType.PastWork,
-        date: new Date('2025-11-01')
+        date: new Date('2025-11-01'),
+        archived: true
     },
     {
         name: 'DOS.Chat',
