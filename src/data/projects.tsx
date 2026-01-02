@@ -115,6 +115,14 @@ const ITEMS: Project[] = [
         archived: true
     },
     {
+        name: 'DOS.Chat',
+        url: 'https://dos.chat',
+        description: 'Sentient retro OS with an 80s sci-fi AI personality.',
+        type: ProjectType.PastWork,
+        date: new Date('2025-04-01'),
+        archived: true
+    },
+    {
         name: 'SuperClaude',
         url: 'https://github.com/gwendall/superclaude',
         description: 'AI commit message generator.',
