@@ -236,7 +236,8 @@ const ITEMS: Project[] = [
             "https://x.com/gwendall/status/1661742156976099329"
         ],
         type: ProjectType.PastWork,
-        date: new Date('2023-05-25')
+        date: new Date('2023-05-25'),
+        archived: true,
     },
 
     // Talks & Exhibitions
