@@ -1,6 +1,20 @@
 import React from "react";
 
-export type ProjectType = "Current Work" | "Ongoing Experiments" | "Past Work" | "Exhibition" | "Talk";
+export enum ProjectType {
+    CurrentWork = "current-work",
+    OngoingExperiments = "ongoing-experiments",
+    PastWork = "past-work",
+    Exhibition = "exhibition",
+    Talk = "talk"
+}
+
+export const ProjectTypeLabels: Record<ProjectType, string> = {
+    [ProjectType.CurrentWork]: "Current Work",
+    [ProjectType.OngoingExperiments]: "Ongoing Experiments",
+    [ProjectType.PastWork]: "Past Work",
+    [ProjectType.Exhibition]: "Exhibition",
+    [ProjectType.Talk]: "Talk"
+};
 
 export type Project = {
     name: string;
@@ -20,14 +34,14 @@ const ITEMS: Project[] = [
         name: 'kami.bot',
         url: 'https://kami.bot',
         description: 'Embodied agent experiments.',
-        type: 'Current Work',
+        type: ProjectType.CurrentWork,
         date: new Date('2026-01-01')
     },
     {
         name: 'meeb.cam',
         url: 'https://meeb.cam',
         description: 'Digital avatar studio.',
-        type: 'Current Work',
+        type: ProjectType.OngoingExperiments,
         date: new Date('2025-02-01'),
         tweets: [
             "https://x.com/gwendall/status/1891486845873148088"
@@ -42,10 +56,9 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/punksOTC/status/1957417802278502572"
         ],
-        type: 'Ongoing Experiments',
-        date: new Date('2024-01-01')
+        type: ProjectType.OngoingExperiments,
+        date: new Date('2025-08-15')
     },
-
     {
         name: 'PUNK.CAM',
         url: 'https://punk.cam',
@@ -54,7 +67,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1707853803536716041",
         ],
-        type: 'Current Work',
+        type: ProjectType.OngoingExperiments,
         date: new Date('2023-09-29')
     },
 
@@ -67,7 +80,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1877018396845383991",
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2025-01-08')
     },
     {
@@ -77,7 +90,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1905662132915490850"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2025-03-01')
     },
     {
@@ -87,14 +100,14 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1934654618669068704"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2025-06-15')
     },
     {
         name: 'SuperClaude',
         url: 'https://github.com/gwendall/superclaude',
         description: 'AI commit message generator.',
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2025-06-01')
     },
     {
@@ -105,21 +118,21 @@ const ITEMS: Project[] = [
                 Interactive map of Paris tech ecosystem. Gave birth to the <a href="https://lafrenchtech.gouv.fr/" target="_blank" rel="noreferrer" className="text-link hover:underline"> French Tech label</a> movement.
             </div>
         ),
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2012-12-01')
     },
     {
         name: 'way.js',
         url: 'https://github.com/gwendall/way.js',
         description: 'Two-way data binding JavaScript library.',
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2014-05-15')
     },
     {
         name: 'PUNKS.ART',
         url: 'https://punks.art',
         description: 'Experimental playground around CryptoPunks - apps, visual systems, and APIs.',
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2024-05-01') // Approximate date based on activity
     },
     {
@@ -130,7 +143,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1854202017876685071"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2024-11-06')
     },
     {
@@ -141,7 +154,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1714972677570445540"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2023-10-19')
     },
     {
@@ -152,7 +165,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1615746051608137729"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2023-01-18')
     },
     {
@@ -163,7 +176,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1429068178454372362"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2021-08-21')
     },
     {
@@ -174,7 +187,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1538550321294856199"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2022-06-19')
     },
     {
@@ -185,7 +198,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1806329360791560300"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2024-06-27')
     },
     {
@@ -196,7 +209,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1635701987021934593"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2023-03-14')
     },
     {
@@ -204,7 +217,7 @@ const ITEMS: Project[] = [
         url: 'https://hotline.fm',
         logo: 'https://hotline.fm/logo.png',
         description: 'AI celebrity conversation platform.',
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2023-08-07')
     },
     {
@@ -215,7 +228,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/gwendall/status/1661742156976099329"
         ],
-        type: 'Past Work',
+        type: ProjectType.PastWork,
         date: new Date('2023-05-25')
     },
 
@@ -224,28 +237,28 @@ const ITEMS: Project[] = [
         name: 'The future of AI Agents, Spatial Computing and NPCs',
         url: 'https://www.youtube.com/watch?v=eqMUsjLFNtM',
         description: 'Talk at NFC Summit, Lisbon.',
-        type: 'Talk',
+        type: ProjectType.Talk,
         date: new Date('2024-06-01')
     },
     {
         name: 'Digital Identity systems and the evolution of avatars',
         url: 'https://www.youtube.com/watch?v=O8SH-yZNUDI',
         description: 'Talk at Metaverse Summit, Paris.',
-        type: 'Talk',
+        type: ProjectType.Talk,
         date: new Date('2023-10-01')
     },
     {
         name: 'The convergence of physical and digital worlds',
         url: 'https://www.youtube.com/watch?v=-0QMNDDCF9k',
         description: 'Talk at EthCC, Paris.',
-        type: 'Talk',
+        type: ProjectType.Talk,
         date: new Date('2022-07-01')
     },
     {
         name: '"London Calling" Exhibition',
         url: 'https://avant-galerie.com/london-calling',
         description: 'Digital art exhibition at Avant Galerie Vossen, Paris.',
-        type: 'Exhibition',
+        type: ProjectType.Exhibition,
         date: new Date('2024-01-13')
     }
 ];

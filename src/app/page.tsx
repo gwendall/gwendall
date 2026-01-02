@@ -1,4 +1,4 @@
-import ITEMS, { Project, ProjectType } from "@/data/projects";
+import ITEMS, { Project, ProjectType, ProjectTypeLabels } from "@/data/projects";
 import Link from "next/link";
 
 function Section({ title, items, description }: { title: string; items: Project[]; description?: string }) {
@@ -56,10 +56,10 @@ function Section({ title, items, description }: { title: string; items: Project[
 }
 
 export default function Home() {
-  const currentWork = ITEMS.filter(item => item.type === 'Current Work');
-  const ongoingExperiments = ITEMS.filter(item => item.type === 'Ongoing Experiments');
-  const pastWork = ITEMS.filter(item => item.type === 'Past Work');
-  const talksAndExhibitions = ITEMS.filter(item => item.type === 'Talk' || item.type === 'Exhibition');
+  const currentWork = ITEMS.filter(item => item.type === ProjectType.CurrentWork);
+  const ongoingExperiments = ITEMS.filter(item => item.type === ProjectType.OngoingExperiments);
+  const pastWork = ITEMS.filter(item => item.type === ProjectType.PastWork);
+  const talksAndExhibitions = ITEMS.filter(item => item.type === ProjectType.Talk || item.type === ProjectType.Exhibition);
 
   return (
     <main className="min-h-screen max-w-2xl mx-auto px-6 py-12 font-mono leading-6">
@@ -93,9 +93,9 @@ export default function Home() {
       </header>
 
       <div className="space-y-12">
-        <Section title="Current Work" items={currentWork} />
-        <Section title="Ongoing Experiments" items={ongoingExperiments} />
-        <Section title="Past Work" items={pastWork} />
+        <Section title={ProjectTypeLabels[ProjectType.CurrentWork]} items={currentWork} />
+        <Section title={ProjectTypeLabels[ProjectType.OngoingExperiments]} items={ongoingExperiments} />
+        <Section title={ProjectTypeLabels[ProjectType.PastWork]} items={pastWork} />
         <Section 
           title="Talks & Exhibitions" 
           items={talksAndExhibitions} 
