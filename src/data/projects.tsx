@@ -26,6 +26,7 @@ export type Project = {
     tweets?: string[];
     isDiscontinued?: boolean; // Kept for potential future use or migration
     isUpcoming?: boolean; // Kept for potential future use or migration
+    hidden?: boolean;
 };
 
 const ITEMS: Project[] = [
@@ -81,7 +82,8 @@ const ITEMS: Project[] = [
             "https://x.com/gwendall/status/1877018396845383991",
         ],
         type: ProjectType.PastWork,
-        date: new Date('2025-01-08')
+        date: new Date('2025-01-08'),
+        hidden: true
     },
     {
         name: 'VibeWorld',

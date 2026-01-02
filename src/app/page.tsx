@@ -2,7 +2,9 @@ import ITEMS, { Project, ProjectType, ProjectTypeLabels } from "@/data/projects"
 import Link from "next/link";
 
 function Section({ title, items, description }: { title: string; items: Project[]; description?: string }) {
-  if (items.length === 0) return null;
+  const visibleItems = items.filter(item => !item.hidden);
+  
+  if (visibleItems.length === 0) return null;
 
   return (
     <section>
@@ -14,7 +16,7 @@ function Section({ title, items, description }: { title: string; items: Project[
         <p className="text-zinc-500 mb-6">{description}</p>
       )}
       <ul className={description ? "space-y-6" : "space-y-6 mt-6"}>
-        {items.sort((a, b) => b.date.getTime() - a.date.getTime()).map((item) => (
+        {visibleItems.sort((a, b) => b.date.getTime() - a.date.getTime()).map((item) => (
           <li key={item.name}>
             <article className="flex flex-col">
               <div>
