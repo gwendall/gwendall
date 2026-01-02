@@ -111,7 +111,8 @@ const ITEMS: Project[] = [
         url: 'https://punkmap.com',
         description: 'Token-gated directory for CryptoPunks. Privacy-focused map showing members\' locations and occupations, accessible only to holders.',
         type: ProjectType.PastWork,
-        date: new Date('2025-07-01')
+        date: new Date('2025-07-01'),
+        archived: true,
     },
     {
         name: 'Fashion AI',
