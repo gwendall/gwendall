@@ -88,7 +88,7 @@ const ITEMS: Project[] = [
     {
         name: 'VibeWorld',
         url: 'https://vibeworld.co',
-        description: 'Persistent multiplayer web-based world engine.',
+        description: 'Persistent multiplayer world engine (web-based).',
         tweets: [
             "https://x.com/gwendall/status/1905662132915490850"
         ],
