@@ -52,7 +52,7 @@ const ITEMS: Project[] = [
     {
         name: 'NakedPunks',
         url: 'https://nakedpunks.app',
-        description: 'Ongoing exploration of full-body pixel avatars with generative appearance & behaviors - initially inspired by CryptoPunks.',
+        description: 'Full-body pixel avatars with generative appearance & behaviors - initially inspired by CryptoPunks.',
         tweets: [
             "https://x.com/punksOTC/status/1957417802278502572"
         ],
