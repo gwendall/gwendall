@@ -147,6 +147,22 @@ const ITEMS: Project[] = [
         archived: true
     },
     {
+        name: 'FriendsDomains',
+        url: 'https://x.com/friendsdomains',
+        description: 'Social platform to share and upvote funny stories behind unused domain names.',
+        type: ProjectType.PastWork,
+        date: new Date('2012-05-01'),
+        archived: true
+    },
+    {
+        name: 'MeanBot',
+        url: 'https://x.com/ameanbot',
+        description: 'Experimental insulting chatbot. Pre-LLM experiment exploring negative interactions.',
+        type: ProjectType.PastWork,
+        date: new Date('2012-06-01'),
+        archived: true
+    },
+    {
         name: 'TechList',
         url: 'https://www.latribune.fr/blogs/tendances-web/20121203trib000734854/une-carte-de-paris-pour-reperer-les-start-up.html',
         description: (
@@ -158,11 +174,14 @@ const ITEMS: Project[] = [
         date: new Date('2012-12-01')
     },
     {
-        name: 'Falcon',
-        url: 'https://news.ycombinator.com/item?id=5165181', // Placeholder or real link if found, using a generic old link logic or leaving empty if unknown. I will check search first or use a placeholder. User said "exit" so maybe there is a press article. I'll stick to a generic description for now.
+        name: 'Falcon / Hackerface',
+        url: 'https://recruitmentmatters.nl/2013/01/19/falcon-io-wat-een-geweldige-tool/',
+        tweets: [
+            "https://x.com/alexisohanian/status/251316911789449216"
+        ],
         description: 'People search engine browser extension. Reconstructed a person\'s entire digital footprint from a single entry point (email, Twitter, etc). Acquired.',
         type: ProjectType.PastWork,
-        date: new Date('2013-06-01'), // Approximate mid-year
+        date: new Date('2013-01-01'), // Approximate mid-year
         archived: true
     },
     {
@@ -246,6 +265,14 @@ const ITEMS: Project[] = [
         type: ProjectType.PastWork,
         date: new Date('2024-06-27'),
         archived: true,
+    },
+    {
+        name: 'xr.fm',
+        url: 'https://xr.fm',
+        description: 'App store for XR apps (VR/AR). Open platform for publishing web-based 3D experiences (Three.js, Babylon, etc).',
+        type: ProjectType.PastWork,
+        date: new Date('2024-07-01'),
+        archived: true
     },
     {
         name: 'AnyChat',
