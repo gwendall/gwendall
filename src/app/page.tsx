@@ -16,8 +16,8 @@ export default function Home() {
       <header className="mb-12">
         <h1 className="font-bold">GWENDALL</h1>
         <p className="text-foreground-muted">
-          Builder & Founder. Exploring systems around avatars, spatial worlds, and autonomous behavior. Find me on{" "}
-          <Link 
+          Builder & founder exploring embodied agents, spatial systems, and autonomous behavior. Find me on{" "}
+          <Link  
             href="https://x.com/gwendall" 
             target="_blank" 
             className="text-link hover:underline font-bold"

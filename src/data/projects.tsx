@@ -55,7 +55,7 @@ const ITEMS: Project[] = [
     {
         name: 'NakedPunks',
         url: 'https://nakedpunks.app',
-        description: 'Full-body pixel avatars with generative appearance & behaviors - initially inspired by CryptoPunks.',
+        description: 'Full-body pixel avatars with generative visuals & behaviors - initially inspired by CryptoPunks.',
         tweets: [
             "https://x.com/punksOTC/status/1957417802278502572"
         ],
@@ -100,7 +100,7 @@ const ITEMS: Project[] = [
     {
         name: 'Nexus.JS',
         url: 'https://punk.cam/lab/nexus',
-        description: 'Lightweight 2D/3D interaction system for browser-based editors and spatial interfaces.',
+        description: '2D/3D interaction system for browser-based editors and spatial tools.',
         tweets: [
             "https://x.com/gwendall/status/1934654618669068704"
         ],

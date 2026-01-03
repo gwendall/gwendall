@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     default: "Gwendall",
     template: "%s | Gwendall",
   },
-  description: "Builder & Founder. Exploring systems around avatars, spatial worlds, and autonomous behavior.",
+  description: "Builder & founder exploring embodied agents, spatial systems, and autonomous behavior.",
   keywords: ["Gwendall", "Product Engineer", "AI", "Avatars", "Spatial Computing", "Robotics", "Design", "Founder"],
   authors: [{ name: "Gwendall" }],
   creator: "Gwendall",
   openGraph: {
     title: "Gwendall",
-    description: "Builder & Founder. Exploring systems around avatars, spatial worlds, and autonomous behavior.",
+    description: "Builder & founder exploring embodied agents, spatial systems, and autonomous behavior.",
     url: "https://gwendall.com",
     siteName: "Gwendall",
     locale: "en_US",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gwendall",
-    description: "Builder & Founder. Exploring systems around avatars, spatial worlds, and autonomous behavior.",
+    description: "Builder & founder exploring embodied agents, spatial systems, and autonomous behavior.",
     creator: "@gwendall",
   },
   robots: {
