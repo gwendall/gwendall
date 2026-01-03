@@ -1,5 +1,6 @@
 import ITEMS, { ProjectType, ProjectTypeLabels } from "@/data/projects";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Section } from "./components/ProjectList";
 
 export default function Home() {
@@ -51,9 +52,9 @@ export default function Home() {
             items={pastWork}
             description="Earlier work and shipped experiments."
           />
-          <div className="text-foreground-faint text-xs mt-6">
-            <Link href="/works" className="hover:text-foreground-muted hover:underline">
-              View All Works →
+          <div className="text-foreground-faint mt-6">
+            <Link href="/works" className="inline-flex items-center gap-1 hover:text-foreground-muted hover:underline">
+              View All Works <ArrowRight size={14} />
             </Link>
           </div>
         </div>
