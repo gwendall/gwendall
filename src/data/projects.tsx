@@ -345,7 +345,7 @@ const ITEMS: Project[] = [
     {
         name: 'Digital Identity systems and the evolution of avatars',
         url: 'https://www.youtube.com/watch?v=O8SH-yZNUDI',
-        description: 'Talk at Metaverse Summit, Paris.',
+        description: 'Talk at The Metaverse Summit Podcast, Paris.',
         type: ProjectType.Talk,
         date: new Date('2023-10-01')
     },
