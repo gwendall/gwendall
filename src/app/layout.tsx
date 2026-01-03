@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gwendall's website",
-  description: "Builder.",
+  title: "Gwendall",
+  description: "Builder & Founder. Exploring systems around avatars, spatial worlds, and autonomous behavior.",
   creator: "Gwendall",
   icons: {
     icon: "https://punks.art/api/punks/2113?format=png&background=v2&size=32",

@@ -50,7 +50,6 @@ export default function Home() {
           <Section 
             title={ProjectTypeLabels[ProjectType.PastWork]} 
             items={pastWork}
-            description="Earlier work and shipped experiments."
           />
           <div className="text-foreground-faint mt-6 flex gap-6 text-sm">
             <Link href="/works" className="inline-flex items-center gap-1 hover:text-foreground-muted hover:underline">
