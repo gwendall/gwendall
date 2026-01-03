@@ -194,11 +194,11 @@ const ITEMS: Project[] = [
     },
     {
         name: 'Falcon / Hackerface',
-        url: 'https://recruitmentmatters.nl/2013/01/19/falcon-io-wat-een-geweldige-tool/',
+        url: 'https://booleanstrings.com/2013/01/28/do-not-miss-the-tool/',
         tweets: [
             "https://x.com/alexisohanian/status/251316911789449216"
         ],
-        description: 'People search engine browser extension. Reconstructed a person\'s entire digital footprint from a single entry point (email, Twitter, etc). Strategic asset acquisition ($85k exit).',
+        description: 'People search engine browser extension. Reconstructed digital footprints from a single data point. Strategic asset acquisition ($85k exit).',
         type: ProjectType.PastWork,
         date: new Date('2013-01-01'), // Approximate mid-year
         archived: false
