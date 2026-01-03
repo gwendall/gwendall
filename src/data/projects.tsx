@@ -36,7 +36,7 @@ const ITEMS: Project[] = [
     {
         name: 'kami.bot',
         url: 'https://kami.bot',
-        description: 'Embodied agent experiments across digital and physical environments.',
+        description: 'Embodied agent experiments across digital & physical environments.',
         type: ProjectType.CurrentWork,
         date: new Date('2026-01-01')
     },
