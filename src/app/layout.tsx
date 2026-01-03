@@ -128,7 +128,7 @@ export default function RootLayout({
           </header>
           {children}
           <footer className="mt-12 text-foreground-muted text-sm opacity-60">
-            Gwendall - Crafting digital worlds since 2012.
+            Gwendall - Crafting worlds since 2010.
           </footer>
         </main>
       </body>
