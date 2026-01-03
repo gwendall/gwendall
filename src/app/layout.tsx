@@ -97,7 +97,7 @@ export default function RootLayout({
           }}
         />
         <ThemeToggle />
-        <main className="min-h-screen max-w-2xl mx-auto px-6 py-12 font-mono leading-6">
+        <main className="min-h-screen max-w-2xl mx-auto px-6 py-14 font-mono leading-6">
           <header className="mb-12">
             <h1 className="font-bold">GWENDALL</h1>
             <p className="text-foreground-muted">
