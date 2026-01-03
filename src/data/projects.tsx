@@ -360,14 +360,14 @@ const ITEMS: Project[] = [
     {
         name: 'Digital Identity systems and the evolution of avatars',
         url: 'https://www.youtube.com/watch?v=O8SH-yZNUDI',
-        description: 'Talk at Metaverse Summit Podcast, Paris.',
+        description: 'Podcast at The Dreamers Lab, Paris.',
         type: ProjectType.Talk,
         date: new Date('2023-10-01')
     },
     {
         name: 'Metaverse: Myths & Realities',
         url: 'https://www.youtube.com/watch?v=bJhIJD_Dz_8',
-        description: 'Talk at NFT Biarritz.',
+        description: 'Panel at NFT Biarritz.',
         type: ProjectType.Talk,
         date: new Date('2022-08-26'),
         archived: true
@@ -414,7 +414,7 @@ const ITEMS: Project[] = [
     {
         name: 'The future of Marketplaces',
         url: 'https://www.youtube.com/watch?v=O_THL2006q8',
-        description: 'Talk at Paris NFT Day (Chain of Events).',
+        description: 'Panel at Paris NFT Day (Chain of Events).',
         type: ProjectType.Talk,
         date: new Date('2022-01-01'),
         archived: true
@@ -422,7 +422,7 @@ const ITEMS: Project[] = [
     {
         name: 'New forms of ownership: Digital Real Estate',
         url: 'https://www.youtube.com/watch?v=8tATHviiMcI',
-        description: 'Talk at Paris NFT Day (Chain of Events).',
+        description: 'Panel at Paris NFT Day (Chain of Events).',
         type: ProjectType.Talk,
         date: new Date('2022-01-01'),
         archived: true
@@ -462,7 +462,7 @@ const ITEMS: Project[] = [
     {
         name: 'Will SocialFi spark the next Bull Run?',
         url: 'https://www.listennotes.com/fr/podcasts/nft-morning/599-d%C3%A9bat-les-socialfi-vont-twFiJRCKWre/',
-        description: 'Debate at NFT Morning.',
+        description: 'Podcast at NFT Morning.',
         type: ProjectType.Talk,
         date: new Date('2023-09-07'),
         archived: true
@@ -476,9 +476,9 @@ const ITEMS: Project[] = [
         archived: true
     },
     {
-        name: 'Metaverse Perspectives (w/ Sébastien Borget)',
+        name: 'Metaverse Perspectives',
         url: 'https://www.listennotes.com/fr/podcasts/comptoir-web3-sur/e30-s%C3%A9bastien-borget-the-gH3zrSNZi90/',
-        description: 'Joint interview at Comptoir Web3 comparing our visions for the metaverse.',
+        description: 'Podcast at Comptoir Web3 (w/ Sébastien Borget).',
         type: ProjectType.Talk,
         date: new Date('2023-01-31'),
         archived: true
