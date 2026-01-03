@@ -404,7 +404,7 @@ const ITEMS: Project[] = [
         archived: true
     },
     {
-        name: 'The Future of Decentralized Marketplaces',
+        name: 'The future of Marketplaces',
         url: 'https://www.youtube.com/watch?v=O_THL2006q8',
         description: 'Talk at Paris NFT Day (Chain of Events).',
         type: ProjectType.Talk,
@@ -412,11 +412,19 @@ const ITEMS: Project[] = [
         archived: true
     },
     {
-        name: 'Digital Real Estate & Spatial Ownership',
+        name: 'New forms of ownership: Digital Real Estate',
         url: 'https://www.youtube.com/watch?v=8tATHviiMcI',
         description: 'Talk at Paris NFT Day (Chain of Events).',
         type: ProjectType.Talk,
         date: new Date('2022-01-01'),
+        archived: true
+    },
+    {
+        name: 'Fractional Ownership & Digital Collectives',
+        url: 'https://x.com/NFTmorning/status/1968575158773522440',
+        description: 'Podcast at NFT Morning.',
+        type: ProjectType.Talk,
+        date: new Date('2025-09-18'),
         archived: true
     }
 ];
