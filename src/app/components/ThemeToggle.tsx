@@ -19,6 +19,13 @@ export function ThemeToggle() {
         } else {
             document.documentElement.classList.remove("dark");
         }
+
+        // Enable transitions after a short delay
+        const timeout = setTimeout(() => {
+            document.body.classList.remove("preload-transitions");
+        }, 100);
+
+        return () => clearTimeout(timeout);
     }, []);
 
     const toggleTheme = () => {
