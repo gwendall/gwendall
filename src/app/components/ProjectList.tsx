@@ -47,10 +47,11 @@ export function ProjectList({ items }: { items: Project[] }) {
                 <Link
                   href={item.tweets[0]}
                   target="_blank"
-                  className="inline-flex items-center justify-center ml-2 text-foreground-faint hover:text-foreground-muted transition-colors align-middle"
-                  title="View Tweet"
+                  className="inline-flex items-center justify-center ml-2 p-1 -m-1 text-foreground-muted hover:text-foreground transition-colors align-middle"
+                  title="View Tweet (opens in a new tab)"
+                  aria-label="View Tweet (opens in a new tab)"
                 >
-                  <ArrowUpRight size={16} />
+                  <ArrowUpRight size={16} aria-hidden="true" />
                 </Link>
               )}
             </div>
@@ -72,7 +73,7 @@ export function Section({ title, items, description }: { title: string; items: P
   return (
     <section>
       <div className="flex items-center gap-2 mb-2">
-        <div className="w-2.5 h-2.5 bg-foreground -translate-y-[0.5px]" />
+        <div className="w-2.5 h-2.5 bg-foreground -translate-y-[0.5px]" aria-hidden="true" />
         <h2 className="font-bold text-foreground text-xs tracking-wider uppercase">{title}</h2>
       </div>
       {description && (

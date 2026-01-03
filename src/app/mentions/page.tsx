@@ -21,7 +21,7 @@ function MentionItem({ item }: { item: Mention }) {
         </span>
         <span className="text-foreground-muted whitespace-nowrap">
             — {item.source}, {item.date.getFullYear()}
-            <ArrowUpRight size={10} className="inline ml-1 mb-0.5 text-foreground-faint group-hover:text-foreground-muted transition-colors opacity-0 group-hover:opacity-100" />
+            <ArrowUpRight size={10} aria-hidden="true" className="inline ml-1 mb-0.5 text-foreground-muted group-hover:text-foreground transition-colors opacity-0 group-hover:opacity-100" />
         </span>
       </Link>
     </li>
