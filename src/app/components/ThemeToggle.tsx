@@ -6,12 +6,27 @@ import { useEffect, useState } from "react";
 export function ThemeToggle() {
     const [theme, setTheme] = useState<"light" | "dark" | null>(null);
 
+    const updateThemeColor = (theme: "light" | "dark") => {
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        const color = theme === "dark" ? "#0a0a0a" : "#fafafa";
+        
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute("content", color);
+        } else {
+            const meta = document.createElement("meta");
+            meta.name = "theme-color";
+            meta.content = color;
+            document.head.appendChild(meta);
+        }
+    };
+
     useEffect(() => {
         // Check local storage or system preference
         const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
         const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         
         const initialTheme = savedTheme || systemTheme;
+        // eslint-disable-next-line
         setTheme(initialTheme);
         updateThemeColor(initialTheme);
         
@@ -28,20 +43,6 @@ export function ThemeToggle() {
 
         return () => clearTimeout(timeout);
     }, []);
-
-    const updateThemeColor = (theme: "light" | "dark") => {
-        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-        const color = theme === "dark" ? "#0a0a0a" : "#fafafa";
-        
-        if (metaThemeColor) {
-            metaThemeColor.setAttribute("content", color);
-        } else {
-            const meta = document.createElement("meta");
-            meta.name = "theme-color";
-            meta.content = color;
-            document.head.appendChild(meta);
-        }
-    };
 
     const toggleTheme = () => {
         const newTheme = theme === "light" ? "dark" : "light";

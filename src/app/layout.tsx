@@ -19,8 +19,6 @@ const geistMono = Geist_Mono({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   themeColor: "#fafafa", // Default, will be updated by JS
 };
 
@@ -60,8 +58,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "https://punks.art/api/punks/2113?format=png&background=v2&size=32",
-    apple: "https://punks.art/api/punks/2113?format=png&background=v2&size=180",
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
   },
 };
 

@@ -15,6 +15,7 @@ export function ProjectList({ items }: { items: Project[] }) {
                 <Link 
                   href={item.url} 
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="font-bold text-link hover:underline uppercase tracking-wide mr-3"
                 >
                   {item.name}
@@ -47,6 +48,7 @@ export function ProjectList({ items }: { items: Project[] }) {
                 <Link
                   href={item.tweets[0]}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center ml-2 p-1 -m-1 text-foreground-muted hover:text-foreground transition-colors align-middle"
                   title="View Tweet (opens in a new tab)"
                   aria-label="View Tweet (opens in a new tab)"

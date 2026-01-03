@@ -25,7 +25,7 @@ html.dark {
   --color-foreground-muted: var(--foreground-muted);
   --color-foreground-faint: var(--foreground-faint);
   --color-link: var(--link);
-  --font-mono: "SF Mono", Menlo, Monaco, "Courier New", monospace;
+  --font-mono: var(--font-geist-mono), "SF Mono", Menlo, Monaco, "Courier New", monospace;
 }
 
 
@@ -41,8 +41,4 @@ body {
 .preload-transitions,
 .preload-transitions * {
   transition: none !important;
-}
-
-body * {
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }

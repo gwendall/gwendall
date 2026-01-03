@@ -1,5 +1,5 @@
 import React from "react";
-import MENTIONS, { TESTIMONIALS, Mention } from "@/data/mentions";
+import MENTIONS, { Mention } from "@/data/mentions";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
@@ -14,6 +14,7 @@ function MentionItem({ item }: { item: Mention }) {
       <Link 
         href={item.url}
         target="_blank"
+        rel="noopener noreferrer"
         className="block text-sm"
       >
         <span className="font-bold text-foreground hover:text-link transition-colors mr-2">

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "pagespeed": "node scripts/check-pagespeed.js",
     "lint": "eslint"
   },
   "dependencies": {
