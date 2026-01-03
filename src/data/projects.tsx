@@ -200,7 +200,7 @@ const ITEMS: Project[] = [
         ],
         description: 'People search engine browser extension. Reconstructed digital footprints from a single data point. Strategic asset acquisition ($85k exit).',
         type: ProjectType.PastWork,
-        date: new Date('2013-01-01'), // Approximate mid-year
+        date: new Date('2012-09-01'), // Approximate mid-year
         archived: false
     },
     {
