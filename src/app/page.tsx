@@ -58,11 +58,18 @@ export default function Home() {
           </div>
         </div>
 
-        <Section 
-          title="Talks & Exhibitions" 
-          items={talksAndExhibitions} 
-          description="I regularly speak about AI agents, avatars, and the convergence of physical and digital systems."
-        />
+        <div>
+          <Section 
+            title="Selected Talks & Exhibitions" 
+            items={talksAndExhibitions} 
+            description="I regularly speak about AI agents, avatars, and the convergence of physical and digital systems."
+          />
+          <div className="text-foreground-muted mt-6 flex gap-6 text-sm">
+            <Link href="/talks" className="inline-flex items-center gap-1 hover:text-foreground hover:underline">
+              View All Talks <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );
