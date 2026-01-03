@@ -165,6 +165,14 @@ const ITEMS: Project[] = [
         archived: true
     },
     {
+        name: 'Hoodsup',
+        url: 'https://news.ycombinator.com/item?id=3282368',
+        description: 'Interest-based local chatroulette. Real-time video matching with people nearby sharing similar interests.',
+        type: ProjectType.PastWork,
+        date: new Date('2011-11-27'),
+        archived: true
+    },
+    {
         name: 'MeanBot',
         url: 'https://x.com/ameanbot',
         description: 'Experimental insulting chatbot. Pre-LLM experiment exploring negative interactions.',
@@ -243,7 +251,7 @@ const ITEMS: Project[] = [
         name: 'Metahood',
         url: 'https://metahood.xyz',
         logo: 'https://pbs.twimg.com/profile_images/1613845233136959488/Sl4TG6ZV_400x400.jpg',
-        description: 'Virtual real estate marketplace. Raised $3M from top tier VCs.',
+        description: 'Virtual real estate marketplace. Raised $3M from top tier investors.',
         tweets: [
             "https://x.com/gwendall/status/1615746051608137729"
         ],
