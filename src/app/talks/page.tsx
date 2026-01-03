@@ -13,12 +13,10 @@ export default function Talks() {
 
   return (
     <>
-      <header className="mb-12">
-        <div className="mb-6">
-          <Link href="/" className="inline-flex items-center gap-1 text-foreground-muted hover:text-foreground hover:underline">
-            <ArrowLeft size={14} /> Back
-          </Link>
-        </div>
+      <header className="mb-4">
+        <Link href="/" className="inline-flex items-center gap-1 text-foreground-muted hover:text-foreground hover:underline">
+          <ArrowLeft size={14} /> Back
+        </Link>
       </header>
 
       <div className="space-y-12">

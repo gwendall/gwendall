@@ -33,17 +33,17 @@ export default function Mentions() {
 
   return (
     <>
-      <header className="mb-12">
-        <div className="mb-6">
-          <Link href="/" className="inline-flex items-center gap-1 text-foreground-muted hover:text-foreground hover:underline">
-            <ArrowLeft size={14} /> Back
-          </Link>
-        </div>
+      <header className="mb-4">
+        <Link href="/" className="inline-flex items-center gap-1 text-foreground-muted hover:text-foreground hover:underline">
+          <ArrowLeft size={14} /> Back
+        </Link>
+      </header>
+      <div className="mb-4">
         <h1 className="font-bold mb-2">MENTIONS</h1>
         <p className="text-foreground-muted">
           Selected press coverage, talks, and community feedback.
         </p>
-      </header>
+      </div>
 
       <div className="space-y-16">
         <section>
