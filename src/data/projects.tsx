@@ -117,7 +117,7 @@ const ITEMS: Project[] = [
     {
         name: 'Fashion AI',
         url: 'https://fashion-ai-eight.vercel.app/',
-        description: 'Photo-based outfit identifier and style analysis tool.',
+        description: 'Photo-based outfit recognition and style analysis tool.',
         type: ProjectType.PastWork,
         date: new Date('2025-09-01'), // Approximate date
         archived: true
@@ -134,7 +134,7 @@ const ITEMS: Project[] = [
     {
         name: 'Super Looter',
         url: 'https://superlooter.vercel.app',
-        description: 'Retro-gaming scanner. Extracts game info from photos to compare in-store prices with eBay Japan (just needed it for myself while travelling).',
+        description: 'Retro-gaming scanner. Extracts game info from photos to compare in-store prices with eBay Japan.',
         type: ProjectType.PastWork,
         date: new Date('2025-11-01'),
         archived: true
@@ -278,7 +278,7 @@ const ITEMS: Project[] = [
     {
         name: 'xr.fm',
         url: 'https://xr.fm',
-        description: 'App store for XR apps (VR/AR). Open platform for publishing web-based 3D experiences (Three.js, Babylon, etc).',
+        description: 'Open platform for publishing web-based XR experiences.',
         type: ProjectType.PastWork,
         date: new Date('2024-07-01'),
         archived: true
