@@ -198,10 +198,10 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/alexisohanian/status/251316911789449216"
         ],
-        description: 'People search engine browser extension. Reconstructed a person\'s entire digital footprint from a single entry point (email, Twitter, etc). Acquired.',
+        description: 'People search engine browser extension. Reconstructed a person\'s entire digital footprint from a single entry point (email, Twitter, etc). Strategic asset acquisition ($85k exit).',
         type: ProjectType.PastWork,
         date: new Date('2013-01-01'), // Approximate mid-year
-        archived: true
+        archived: false
     },
     {
         name: 'way.js',
@@ -243,7 +243,7 @@ const ITEMS: Project[] = [
         name: 'Metahood',
         url: 'https://metahood.xyz',
         logo: 'https://pbs.twimg.com/profile_images/1613845233136959488/Sl4TG6ZV_400x400.jpg',
-        description: 'Virtual real estate marketplace. VC-backed.',
+        description: 'Virtual real estate marketplace. Raised $3M from top tier VCs.',
         tweets: [
             "https://x.com/gwendall/status/1615746051608137729"
         ],
