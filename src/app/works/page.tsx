@@ -1,7 +1,7 @@
 import ITEMS, { ProjectType } from "@/data/projects";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { ProjectList } from "@/app/components/ProjectList";
+import { Section } from "@/app/components/ProjectList";
 
 export const metadata = {
   title: "Works | Gwendall",
@@ -19,14 +19,14 @@ export default function Works() {
             <ArrowLeft size={14} /> Back
           </Link>
         </div>
-        <h1 className="font-bold mb-2">ALL WORKS</h1>
-        <p className="text-foreground-muted">
-          List of projects & experiments (unreleased included).
-        </p>
       </header>
 
       <div className="space-y-12">
-        <ProjectList items={allWorks} />
+        <Section 
+          title="ALL WORKS" 
+          items={allWorks} 
+          description="Complete list of projects & experiments (unreleased included)."
+        />
       </div>
     </main>
   );
