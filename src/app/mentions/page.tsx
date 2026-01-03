@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 export const metadata = {
-  title: "Mentions | Gwendall",
+  title: "Mentions",
   description: "Selected press, talks, and testimonials.",
 };
 

@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { Section } from "@/app/components/ProjectList";
 
 export const metadata = {
-  title: "Talks & Exhibitions | Gwendall",
+  title: "Talks & Exhibitions",
   description: "Selected talks and exhibitions.",
 };
 
