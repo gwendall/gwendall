@@ -1,0 +1,53 @@
+"use client";
+
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+
+export function ThemeToggle() {
+    const [theme, setTheme] = useState<"light" | "dark" | null>(null);
+
+    useEffect(() => {
+        // Check local storage or system preference
+        const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        
+        const initialTheme = savedTheme || systemTheme;
+        setTheme(initialTheme);
+        
+        if (initialTheme === "dark") {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    }, []);
+
+    const toggleTheme = () => {
+        const newTheme = theme === "light" ? "dark" : "light";
+        setTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
+
+        if (newTheme === "dark") {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    };
+
+    // Avoid hydration mismatch by not rendering until mounted (theme is set)
+    if (!theme) return null;
+
+    return (
+        <button
+            onClick={toggleTheme}
+            className="fixed top-6 right-6 z-50 p-2 cursor-pointer transition-colors duration-200 hover:text-gray-500 dark:hover:text-gray-300"
+            aria-label="Toggle theme"
+        >
+            {theme === "light" ? (
+                <Sun size={20} strokeWidth={2} />
+            ) : (
+                <Moon size={20} strokeWidth={2} />
+            )}
+        </button>
+    );
+}
+

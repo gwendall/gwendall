@@ -10,15 +10,15 @@ export function ProjectList({ items }: { items: Project[] }) {
       {items.sort((a, b) => b.date.getTime() - a.date.getTime()).map((item) => (
         <li key={item.name}>
           <article className="flex flex-col">
-            <div className="flex items-center">
+            <div className="block leading-relaxed mb-0.5">
               <Link 
                 href={item.url} 
                 target="_blank"
-                className="font-bold text-link hover:underline uppercase tracking-wide mr-4"
+                className="font-bold text-link hover:underline uppercase tracking-wide mr-3"
               >
                 {item.name}
               </Link>
-              <span className="text-black tabular-nums">
+              <span className="text-foreground tabular-nums whitespace-nowrap">
                 {new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" })
                   .format(item.date)
                   .toUpperCase()}
@@ -27,7 +27,7 @@ export function ProjectList({ items }: { items: Project[] }) {
                 <Link
                   href={item.tweets[0]}
                   target="_blank"
-                  className="inline-flex items-center justify-center ml-2 text-zinc-400 hover:text-zinc-600 transition-colors"
+                  className="inline-flex items-center justify-center ml-2 text-foreground-faint hover:text-foreground-muted transition-colors align-middle"
                   title="View Tweet"
                 >
                   <ArrowUpRight size={16} />
@@ -35,7 +35,7 @@ export function ProjectList({ items }: { items: Project[] }) {
               )}
             </div>
             
-            <div className="text-zinc-700">
+            <div className="text-foreground-muted">
               {item.description}
             </div>
           </article>
@@ -52,11 +52,11 @@ export function Section({ title, items, description }: { title: string; items: P
   return (
     <section>
       <div className="flex items-center gap-2 mb-2">
-        <div className="w-2.5 h-2.5 bg-zinc-400 -translate-y-[0.5px]" />
-        <h2 className="font-bold text-zinc-600 text-xs tracking-wider uppercase">{title}</h2>
+        <div className="w-2.5 h-2.5 bg-foreground-faint -translate-y-[0.5px]" />
+        <h2 className="font-bold text-foreground-muted text-xs tracking-wider uppercase">{title}</h2>
       </div>
       {description && (
-        <p className="text-zinc-500 mb-6">{description}</p>
+        <p className="text-foreground-muted mb-6">{description}</p>
       )}
       <div className={description ? "" : "mt-6"}>
         <ProjectList items={items} />

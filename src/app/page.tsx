@@ -14,7 +14,7 @@ export default function Home() {
     <main className="min-h-screen max-w-2xl mx-auto px-6 py-12 font-mono leading-6">
       <header className="mb-12">
         <h1 className="font-bold">GWENDALL</h1>
-        <p className="text-zinc-600">
+        <p className="text-foreground-muted">
           Builder & Founder. Exploring systems around avatars, spatial worlds, and autonomous behavior. Find me on{" "}
           <Link 
             href="https://x.com/gwendall" 
@@ -51,8 +51,8 @@ export default function Home() {
             items={pastWork}
             description="Earlier work and shipped experiments."
           />
-          <div className="text-zinc-400 text-xs mt-6">
-            <Link href="/works" className="hover:text-zinc-600 hover:underline">
+          <div className="text-foreground-faint text-xs mt-6">
+            <Link href="/works" className="hover:text-foreground-muted hover:underline">
               View All Works →
             </Link>
           </div>
