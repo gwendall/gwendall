@@ -21,7 +21,7 @@ export default function Works() {
         </div>
         <h1 className="font-bold mb-2">ALL WORKS</h1>
         <p className="text-foreground-muted">
-          Complete list of projects & experiments (unreleased included).
+          List of projects & experiments (unreleased included).
         </p>
       </header>
 
