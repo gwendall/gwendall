@@ -201,7 +201,7 @@ const ITEMS: Project[] = [
         date: new Date('2012-12-01')
     },
     {
-        name: 'Falcon / Hackerface',
+        name: 'Falcon (previously Hackerface)',
         url: 'https://booleanstrings.com/2013/01/28/do-not-miss-the-tool/',
         tweets: [
             "https://x.com/alexisohanian/status/251316911789449216"
