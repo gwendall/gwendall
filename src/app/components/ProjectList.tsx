@@ -24,7 +24,7 @@ export function ProjectList({ items }: { items: Project[] }) {
                   {item.name}
                 </span>
               )}
-              <span className="text-foreground tabular-nums whitespace-nowrap">
+              <span className="text-foreground-muted tabular-nums whitespace-nowrap">
                 {(() => {
                     const startYear = item.date.getFullYear();
                     const endYear = item.dateEnd?.getFullYear();
@@ -72,8 +72,8 @@ export function Section({ title, items, description }: { title: string; items: P
   return (
     <section>
       <div className="flex items-center gap-2 mb-2">
-        <div className="w-2.5 h-2.5 bg-foreground-faint -translate-y-[0.5px]" />
-        <h2 className="font-bold text-foreground-muted text-xs tracking-wider uppercase">{title}</h2>
+        <div className="w-2.5 h-2.5 bg-foreground -translate-y-[0.5px]" />
+        <h2 className="font-bold text-foreground text-xs tracking-wider uppercase">{title}</h2>
       </div>
       {description && (
         <p className="text-foreground-muted mb-6">{description}</p>
