@@ -343,11 +343,34 @@ const ITEMS: Project[] = [
         date: new Date('2024-06-01')
     },
     {
+        name: '"London Calling" Exhibition',
+        url: 'https://avant-galerie.com/london-calling',
+        description: 'Digital art exhibition at Avant Galerie Vossen, Paris.',
+        type: ProjectType.Exhibition,
+        date: new Date('2024-01-13')
+    },
+    {
         name: 'Digital Identity systems and the evolution of avatars',
         url: 'https://www.youtube.com/watch?v=O8SH-yZNUDI',
-        description: 'Talk at The Metaverse Summit Podcast, Paris.',
+        description: 'Talk at Metaverse Summit Podcast, Paris.',
         type: ProjectType.Talk,
         date: new Date('2023-10-01')
+    },
+    {
+        name: 'Metaverse: Myths & Realities',
+        url: 'https://www.youtube.com/watch?v=bJhIJD_Dz_8',
+        description: 'Talk at NFT Biarritz.',
+        type: ProjectType.Talk,
+        date: new Date('2022-08-26'),
+        archived: true
+    },
+    {
+        name: 'Digital Land & Virtual Spaces',
+        url: 'https://www.youtube.com/watch?v=WIknKMOmjEU',
+        description: 'Panel at Metaverse Summit, Paris.',
+        type: ProjectType.Talk,
+        date: new Date('2022-07-16'),
+        archived: true
     },
     {
         name: 'The convergence of physical and digital worlds',
@@ -357,11 +380,44 @@ const ITEMS: Project[] = [
         date: new Date('2022-07-01')
     },
     {
-        name: '"London Calling" Exhibition',
-        url: 'https://avant-galerie.com/london-calling',
-        description: 'Digital art exhibition at Avant Galerie Vossen, Paris.',
-        type: ProjectType.Exhibition,
-        date: new Date('2024-01-13')
+        name: 'Building for the Open Metaverse',
+        url: 'https://www.youtube.com/watch?v=Jlpi_Nc4Alc',
+        description: 'Talk at NFT.NYC, New York.',
+        type: ProjectType.Talk,
+        date: new Date('2022-06-21'),
+        archived: true
+    },
+    {
+        name: 'Web3 Innovation Pitch',
+        url: 'https://www.youtube.com/watch?v=RAYwps-LzkA&t=2814',
+        description: 'Pitch contest at Vivatech, Paris.',
+        type: ProjectType.Talk,
+        date: new Date('2022-06-15'),
+        archived: true
+    },
+    {
+        name: 'Do we need a Meta-Metaverse?',
+        url: 'https://www.youtube.com/watch?v=3qmxOtNqfzE',
+        description: 'Panel at NFC Summit, Lisbon.',
+        type: ProjectType.Talk,
+        date: new Date('2022-04-01'),
+        archived: true
+    },
+    {
+        name: 'The Future of Decentralized Marketplaces',
+        url: 'https://www.youtube.com/watch?v=O_THL2006q8',
+        description: 'Talk at Paris NFT Day (Chain of Events).',
+        type: ProjectType.Talk,
+        date: new Date('2022-01-01'),
+        archived: true
+    },
+    {
+        name: 'Digital Real Estate & Spatial Ownership',
+        url: 'https://www.youtube.com/watch?v=8tATHviiMcI',
+        description: 'Talk at Paris NFT Day (Chain of Events).',
+        type: ProjectType.Talk,
+        date: new Date('2022-01-01'),
+        archived: true
     }
 ];
 
