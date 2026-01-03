@@ -35,7 +35,7 @@ export default function Mentions() {
     <main className="min-h-screen max-w-2xl mx-auto px-6 py-12 font-mono leading-6">
       <header className="mb-12">
         <div className="mb-6">
-          <Link href="/" className="inline-flex items-center gap-1 text-foreground-faint hover:text-foreground-muted hover:underline">
+          <Link href="/" className="inline-flex items-center gap-1 text-foreground-muted hover:text-foreground hover:underline">
             <ArrowLeft size={14} /> Back
           </Link>
         </div>
