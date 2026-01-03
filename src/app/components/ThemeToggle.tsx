@@ -13,6 +13,7 @@ export function ThemeToggle() {
         
         const initialTheme = savedTheme || systemTheme;
         setTheme(initialTheme);
+        updateThemeColor(initialTheme);
         
         if (initialTheme === "dark") {
             document.documentElement.classList.add("dark");
@@ -28,10 +29,25 @@ export function ThemeToggle() {
         return () => clearTimeout(timeout);
     }, []);
 
+    const updateThemeColor = (theme: "light" | "dark") => {
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        const color = theme === "dark" ? "#0a0a0a" : "#fafafa";
+        
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute("content", color);
+        } else {
+            const meta = document.createElement("meta");
+            meta.name = "theme-color";
+            meta.content = color;
+            document.head.appendChild(meta);
+        }
+    };
+
     const toggleTheme = () => {
         const newTheme = theme === "light" ? "dark" : "light";
         setTheme(newTheme);
         localStorage.setItem("theme", newTheme);
+        updateThemeColor(newTheme);
 
         if (newTheme === "dark") {
             document.documentElement.classList.add("dark");
