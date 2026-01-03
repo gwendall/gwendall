@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeToggle } from "./components/ThemeToggle";
 import Link from "next/link";
 
+export const dynamic = 'force-static';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
