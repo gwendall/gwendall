@@ -426,6 +426,54 @@ const ITEMS: Project[] = [
         type: ProjectType.Talk,
         date: new Date('2025-09-18'),
         archived: true
+    },
+    {
+        name: 'The Digital Art Market Boom (HIC.AF)',
+        url: 'https://open.spotify.com/episode/0hsopJvtwPo8PI2RBSyIjg',
+        description: 'Podcast at NFT Morning.',
+        type: ProjectType.Talk,
+        date: new Date('2021-11-02'),
+        archived: true
+    },
+    {
+        name: 'Open Source Building with MeteorJS',
+        url: 'https://www.listennotes.com/fr/podcasts/full-stack/001-gwendall-esnault-meteorjs-goVvO2c5mJ3/',
+        description: 'Podcast at Full Stack Javascript.',
+        type: ProjectType.Talk,
+        date: new Date('2015-06-12'),
+        archived: true
+    },
+    {
+        name: 'The State of Open Metaverse',
+        url: 'https://www.listennotes.com/fr/podcasts/nft-morning/150-ouverture-de-la-PID_FQpthGb/',
+        description: 'Podcast at NFT Morning.',
+        type: ProjectType.Talk,
+        date: new Date('2021-11-08'),
+        archived: true
+    },
+    {
+        name: 'Will SocialFi spark the next Bull Run?',
+        url: 'https://www.listennotes.com/fr/podcasts/nft-morning/599-d%C3%A9bat-les-socialfi-vont-twFiJRCKWre/',
+        description: 'Debate at NFT Morning.',
+        type: ProjectType.Talk,
+        date: new Date('2023-09-07'),
+        archived: true
+    },
+    {
+        name: 'Virtual Lands & Metaverse Analysis (Metahood)',
+        url: 'https://www.listennotes.com/fr/podcasts/nft-morning/422-sp%C3%A9cial-news-nft-avec-E9TCB-QSgyW/',
+        description: 'Podcast at NFT Morning.',
+        type: ProjectType.Talk,
+        date: new Date('2022-12-07'),
+        archived: true
+    },
+    {
+        name: 'Metaverse Perspectives (w/ Sébastien Borget)',
+        url: 'https://www.listennotes.com/fr/podcasts/comptoir-web3-sur/e30-s%C3%A9bastien-borget-the-gH3zrSNZi90/',
+        description: 'Joint interview at Comptoir Web3 comparing our visions for the metaverse.',
+        type: ProjectType.Talk,
+        date: new Date('2023-01-31'),
+        archived: true
     }
 ];
 

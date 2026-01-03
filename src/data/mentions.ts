@@ -72,6 +72,14 @@ const MENTIONS: Mention[] = [
         project: 'Meteor packages'
     },
     {
+        title: 'Metahood raises $3M to build the Zillow of the Metaverse',
+        source: 'Decrypt',
+        url: 'https://decrypt.co/119429/metahood-raises-3m-build-zillow-metaverse',
+        date: new Date('2023-01-18'),
+        type: MentionType.Press,
+        project: 'Metahood'
+    },
+    {
         title: 'Falcon demo',
         source: 'The Jim Stroud Show',
         url: 'https://www.youtube.com/watch?v=5VV3Ej_WTZc&t=1m25s',
