@@ -11,17 +11,37 @@ export function ProjectList({ items }: { items: Project[] }) {
         <li key={item.name}>
           <article className="flex flex-col">
             <div className="block leading-relaxed mb-0.5">
-              <Link 
-                href={item.url} 
-                target="_blank"
-                className="font-bold text-link hover:underline uppercase tracking-wide mr-3"
-              >
-                {item.name}
-              </Link>
+              {item.url ? (
+                <Link 
+                  href={item.url} 
+                  target="_blank"
+                  className="font-bold text-link hover:underline uppercase tracking-wide mr-3"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <span className="font-bold text-foreground uppercase tracking-wide mr-3">
+                  {item.name}
+                </span>
+              )}
               <span className="text-foreground tabular-nums whitespace-nowrap">
-                {new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" })
-                  .format(item.date)
-                  .toUpperCase()}
+                {(() => {
+                    const startYear = item.date.getFullYear();
+                    const endYear = item.dateEnd?.getFullYear();
+
+                    if (item.dateEnd) {
+                        if (startYear !== endYear) {
+                            return `${startYear} - ${endYear}`;
+                        }
+                        const startMonth = new Intl.DateTimeFormat("en-US", { month: "short" }).format(item.date).toUpperCase();
+                        const endMonth = new Intl.DateTimeFormat("en-US", { month: "short" }).format(item.dateEnd).toUpperCase();
+                        return `${startMonth} - ${endMonth} ${startYear}`;
+                    }
+
+                    return new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" })
+                        .format(item.date)
+                        .toUpperCase();
+                })()}
               </span>
               {item.tweets && item.tweets.length > 0 && (
                 <Link

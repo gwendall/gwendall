@@ -18,10 +18,11 @@ export const ProjectTypeLabels: Record<ProjectType, string> = {
 
 export type Project = {
     name: string;
-    url: string;
+    url?: string;
     description: string | React.ReactNode;
     type: ProjectType;
     date: Date;
+    dateEnd?: Date;
     logo?: string;
     tweets?: string[];
     isDiscontinued?: boolean; // Kept for potential future use or migration
@@ -169,6 +170,15 @@ const ITEMS: Project[] = [
         description: 'Experimental insulting chatbot. Pre-LLM experiment exploring negative interactions.',
         type: ProjectType.PastWork,
         date: new Date('2012-06-01'),
+        archived: true
+    },
+    {
+        name: 'The Atelier',
+        url: 'https://5e3c21d2a8851b000833c7e4--the-atelier.netlify.app/',
+        description: 'Product studio working with major groups and startups on zero-to-one product building.',
+        type: ProjectType.PastWork,
+        date: new Date('2016-01-01'),
+        dateEnd: new Date('2020-12-01'),
         archived: true
     },
     {
