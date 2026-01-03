@@ -12,7 +12,7 @@ export default function Home() {
   const talksAndExhibitions = visibleItems.filter(item => item.type === ProjectType.Talk || item.type === ProjectType.Exhibition);
 
   return (
-    <main className="min-h-screen max-w-2xl mx-auto px-6 py-12 font-mono leading-6">
+    <>
       <header className="mb-12">
         <h1 className="font-bold">GWENDALL</h1>
         <p className="text-foreground-muted">
@@ -64,6 +64,6 @@ export default function Home() {
           description="I regularly speak about AI agents, avatars, and the convergence of physical and digital systems."
         />
       </div>
-    </main>
+    </>
   );
 }

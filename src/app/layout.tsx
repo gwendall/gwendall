@@ -96,7 +96,9 @@ export default function RootLayout({
           }}
         />
         <ThemeToggle />
-        {children}
+        <main className="min-h-screen max-w-2xl mx-auto px-6 py-12 font-mono leading-6">
+          {children}
+        </main>
       </body>
     </html>
   );
