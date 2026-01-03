@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa; /* slightly off-white */
   --foreground: #171717;
   --foreground-muted: #52525b; /* zinc-600 */
   --foreground-faint: #a1a1aa; /* zinc-400 */
@@ -12,7 +12,7 @@
 
 /* Use html.dark to ensure specificity and clarity */
 html.dark {
-  --background: #0a0a0a;
+  --background: #0a0a0a; /* neutral-950 (already slightly off-black) */
   --foreground: #ededed;
   --foreground-muted: #a3a3a3; /* neutral-400 */
   --foreground-faint: #525252; /* neutral-600 */
