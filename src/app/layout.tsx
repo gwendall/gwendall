@@ -99,9 +99,9 @@ export default function RootLayout({
           }}
         />
         <ThemeToggle />
-        <main role="main" className="min-h-screen max-w-2xl mx-auto px-6 py-14 font-mono">
+        <main role="main" className="min-h-screen max-w-2xl mx-auto px-6 py-8 font-mono">
           <header className="mb-12">
-            <h1 className="font-bold">GWENDALL</h1>
+            <h1 className="font-bold mb-2">GWENDALL</h1>
             <p className="text-foreground-muted">
               Builder & founder exploring embodied agents, spatial systems, and autonomous behavior. Find me on{" "}
               <Link
