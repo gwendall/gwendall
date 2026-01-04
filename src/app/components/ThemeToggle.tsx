@@ -67,9 +67,9 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {theme === "light" ? (
-        <Sun size={20} strokeWidth={2} aria-hidden="true" focusable={false} />
+        <Sun size={16} strokeWidth={2} aria-hidden="true" focusable={false} />
       ) : (
-        <Moon size={20} strokeWidth={2} aria-hidden="true" focusable={false} />
+        <Moon size={16} strokeWidth={2} aria-hidden="true" focusable={false} />
       )}
     </button>
   );
