@@ -23,7 +23,7 @@ export default function Works() {
         <Section 
           title="ALL WORKS" 
           items={allWorks} 
-          description="Complete list of projects & experiments (unreleased included)."
+          description="A non-exhaustive list of projects and experiments, some unreleased included."
         />
       </div>
     </>
