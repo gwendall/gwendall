@@ -259,9 +259,9 @@ const ITEMS: Project[] = [
         date: new Date('2023-01-18')
     },
     {
-        name: 'CloneX Viewer',
+        name: 'CloneX Studio',
         url: 'https://clone-viewer.vercel.app/',
-        description: 'Fast, minimal web viewer to browse and share 3D CloneX avatars.',
+        description: 'Fast, minimal 3D avatar viewer to browse, share, and showcase CloneX avatars.',
         type: ProjectType.PastWork,
         date: new Date('2022-10-18'),
         archived: true
