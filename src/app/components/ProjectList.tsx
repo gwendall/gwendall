@@ -76,7 +76,7 @@ export function Section({ title, items, description }: { title: string; items: P
     <section>
       <div className="flex items-center gap-2 mb-2">
         <div className="w-2.5 h-2.5 bg-foreground -translate-y-[0.5px]" aria-hidden="true" />
-        <h2 className="font-bold text-foreground text-xs tracking-wider uppercase">{title}</h2>
+        <h2 className="font-bold text-foreground tracking-wider uppercase">{title}</h2>
       </div>
       {description && (
         <p className="text-foreground-muted mb-6">{description}</p>
