@@ -19,6 +19,18 @@ html.dark {
   --link: #60a5fa; /* blue-400 */
 }
 
+html {
+  /* Improves native UI rendering (forms, scrollbars) to match the current theme. */
+  color-scheme: light;
+  /* Prevent iOS Safari from auto-scaling text sizes. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -33,14 +45,23 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-mono);
-  font-size: 13px;
+  /* Font rendering / legibility */
+  font-kerning: normal;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-@media (max-width: 640px) {
-  body {
-    font-size: 14px;
-  }
+/* Base font-size for mobile (and anything < lg). */
+html { font-size: 15px; }
+
+/* Desktop: back to the tighter original sizing. */
+@media (min-width: 1024px) {
+  html { font-size: 13px; }
 }
 
 /* Disable transitions on load to prevent flash */
