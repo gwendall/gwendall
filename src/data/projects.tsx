@@ -194,7 +194,7 @@ const ITEMS: Project[] = [
         url: 'https://www.latribune.fr/blogs/tendances-web/20121203trib000734854/une-carte-de-paris-pour-reperer-les-start-up.html',
         description: (
             <div>
-                Interactive map of French tech ecosystem. Early catalyst for the “<a href="https://lafrenchtech.gouv.fr/en/" target="_blank" rel="noreferrer" className="text-link hover:underline">French Tech</a>” movement.
+                Interactive map of French tech ecosystem. Early catalyst for the “<a href="https://lafrenchtech.gouv.fr/en/" target="_blank" rel="noreferrer" className="text-link underline underline-offset-2 hover:underline">French Tech</a>” movement.
             </div>
         ),
         type: ProjectType.PastWork,
