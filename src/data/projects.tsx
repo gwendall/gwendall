@@ -206,7 +206,7 @@ const ITEMS: Project[] = [
         tweets: [
             "https://x.com/alexisohanian/status/251316911789449216"
         ],
-        description: 'People search engine browser extension. Reconstructed digital footprints from a single data point. Strategic asset acquisition ($85k exit).',
+        description: 'People search engine browser extension. Reconstructed digital footprints from a single data point. Strategic asset acquisition (exit).',
         type: ProjectType.PastWork,
         date: new Date('2012-09-01'), // Approximate mid-year
         archived: false
