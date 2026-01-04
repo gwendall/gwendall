@@ -129,7 +129,7 @@ export default function RootLayout({
             </p>
           </header>
           {children}
-          <footer className="mt-12 text-foreground-muted text-sm">
+          <footer className="mt-12 text-foreground-muted">
             Gwendall - Crafting worlds since 2010.
           </footer>
         </main>

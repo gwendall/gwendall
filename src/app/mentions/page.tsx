@@ -15,7 +15,7 @@ function MentionItem({ item }: { item: Mention }) {
         href={item.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block text-sm"
+        className="block"
       >
         <span className="font-bold text-foreground hover:text-link transition-colors mr-2">
             {item.title}
