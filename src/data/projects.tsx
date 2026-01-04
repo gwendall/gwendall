@@ -259,6 +259,14 @@ const ITEMS: Project[] = [
         date: new Date('2023-01-18')
     },
     {
+        name: 'CloneX Viewer',
+        url: 'https://clone-viewer.vercel.app/',
+        description: 'Fast, minimal web viewer to browse and share 3D CloneX avatars.',
+        type: ProjectType.PastWork,
+        date: new Date('2022-10-18'),
+        archived: true
+    },
+    {
         name: 'HIC.AF',
         url: 'https://hic.af',
         logo: 'https://pbs.twimg.com/profile_images/1448661463321628693/-vgZf5_A_400x400.png',
