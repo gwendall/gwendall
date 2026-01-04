@@ -25,6 +25,10 @@ html {
   /* Prevent iOS Safari from auto-scaling text sizes. */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+
+  /* Responsive typography tuning (unitless so it scales with font-size). */
+  --body-leading: 1.55;
+  --content-leading: 1.65; /* slightly more breathing room on mobile */
 }
 
 html.dark {
@@ -53,7 +57,12 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: var(--body-leading);
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+main {
+  line-height: var(--content-leading);
 }
 
 /* Base font-size for mobile (and anything < lg). */
@@ -61,7 +70,11 @@ html { font-size: 15px; }
 
 /* Desktop: back to the tighter original sizing. */
 @media (min-width: 1024px) {
-  html { font-size: 13px; }
+  html {
+    font-size: 13px;
+    --body-leading: 1.5;
+    --content-leading: 1.55; /* tighter on desktop */
+  }
 }
 
 /* Disable transitions on load to prevent flash */
