@@ -53,7 +53,7 @@ export function ProjectList({ items }: { items: Project[] }) {
                   title="View Tweet (opens in a new tab)"
                   aria-label="View Tweet (opens in a new tab)"
                 >
-                  <ArrowUpRight size={16} aria-hidden="true" />
+                  <ArrowUpRight size={16} aria-hidden="true" focusable={false} />
                 </Link>
               )}
             </div>

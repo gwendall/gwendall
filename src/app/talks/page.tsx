@@ -15,7 +15,7 @@ export default function Talks() {
     <>
       <header className="mb-4">
         <Link href="/" className="inline-flex items-center gap-1 text-foreground-muted hover:text-foreground hover:underline">
-          <ArrowLeft size={14} /> Back
+          <ArrowLeft size={14} aria-hidden="true" focusable={false} /> Back
         </Link>
       </header>
 

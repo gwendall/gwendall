@@ -22,7 +22,7 @@ function MentionItem({ item }: { item: Mention }) {
         </span>
         <span className="text-foreground-muted whitespace-nowrap">
             — {item.source}, {item.date.getFullYear()}
-            <ArrowUpRight size={10} aria-hidden="true" className="inline ml-1 mb-0.5 text-foreground-muted group-hover:text-foreground transition-colors opacity-0 group-hover:opacity-100" />
+            <ArrowUpRight size={10} aria-hidden="true" focusable={false} className="inline ml-1 mb-0.5 text-foreground-muted group-hover:text-foreground transition-colors opacity-0 group-hover:opacity-100" />
         </span>
       </Link>
     </li>
@@ -36,7 +36,7 @@ export default function Mentions() {
     <>
       <header className="mb-4">
         <Link href="/" className="inline-flex items-center gap-1 text-foreground-muted hover:text-foreground hover:underline">
-          <ArrowLeft size={14} /> Back
+          <ArrowLeft size={14} aria-hidden="true" focusable={false} /> Back
         </Link>
       </header>
       <div className="mb-4">

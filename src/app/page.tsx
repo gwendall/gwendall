@@ -24,7 +24,7 @@ export default function Home() {
           />
           <div className="text-foreground-muted mt-6 flex gap-6 text-sm">
             <Link href="/works" className="inline-flex items-center gap-1 hover:text-foreground hover:underline">
-              View All Works <ArrowRight size={14} />
+              View All Works <ArrowRight size={14} aria-hidden="true" focusable={false} />
             </Link>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function Home() {
           />
           <div className="text-foreground-muted mt-6 flex gap-6 text-sm">
             <Link href="/talks" className="inline-flex items-center gap-1 hover:text-foreground hover:underline">
-              View All Talks <ArrowRight size={14} />
+              View All Talks <ArrowRight size={14} aria-hidden="true" focusable={false} />
             </Link>
           </div>
         </div>
