@@ -261,7 +261,7 @@ const ITEMS: Project[] = [
     {
         name: 'CloneX Studio',
         url: 'https://clone-viewer.vercel.app/',
-        description: 'Fast, minimal 3D avatar viewer to browse, share, and showcase CloneX avatars.',
+        description: 'Fast, minimal 3D avatar viewer for CloneX avatars.',
         type: ProjectType.PastWork,
         date: new Date('2022-10-18'),
         archived: true
