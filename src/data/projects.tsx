@@ -41,6 +41,14 @@ const ITEMS: Project[] = [
         date: new Date('2026-01-01')
     },
     {
+        name: 'OnChainProxy',
+        url: 'https://onchainproxy.io',
+        description: "Stable, cache-friendly URLs for on-chain asset metadata and images (open source).",
+        type: ProjectType.PastWork,
+        date: new Date('2026-01-01'),
+        archived: false
+    },
+    {
         name: 'meeb.cam',
         url: 'https://meeb.cam',
         description: 'Digital avatar studio.',
