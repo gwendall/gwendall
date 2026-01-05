@@ -43,7 +43,7 @@ const ITEMS: Project[] = [
     {
         name: 'OnChainProxy',
         url: 'https://onchainproxy.io',
-        description: "Stable, cache-friendly URLs for on-chain asset metadata and images (open source).",
+        description: "Stable, cache-friendly URLs for on-chain asset metadata and images. Open source.",
         type: ProjectType.PastWork,
         date: new Date('2026-01-01'),
         archived: false
