@@ -326,7 +326,8 @@ const ITEMS: Project[] = [
             "https://x.com/gwendall/status/1635701987021934593"
         ],
         type: ProjectType.PastWork,
-        date: new Date('2023-03-14')
+        date: new Date('2023-03-14'),
+        archived: true
     },
     {
         name: 'ANOTHER.CAM',
