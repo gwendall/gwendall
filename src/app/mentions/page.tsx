@@ -1,11 +1,20 @@
+import type { Metadata } from "next";
 import React from "react";
 import MENTIONS, { Mention } from "@/data/mentions";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Mentions",
   description: "Selected press, talks, and testimonials.",
+  openGraph: {
+    title: "Mentions | Gwendall",
+    description: "Selected press, talks, and testimonials.",
+  },
+  twitter: {
+    title: "Mentions | Gwendall",
+    description: "Selected press, talks, and testimonials.",
+  },
 };
 
 function MentionItem({ item }: { item: Mention }) {

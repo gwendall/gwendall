@@ -1,11 +1,20 @@
+import type { Metadata } from "next";
 import ITEMS, { ProjectType } from "@/data/projects";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Section } from "@/app/components/ProjectList";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Talks & Exhibitions",
   description: "Selected talks and exhibitions.",
+  openGraph: {
+    title: "Talks & Exhibitions | Gwendall",
+    description: "Selected talks and exhibitions.",
+  },
+  twitter: {
+    title: "Talks & Exhibitions | Gwendall",
+    description: "Selected talks and exhibitions.",
+  },
 };
 
 export default function Talks() {

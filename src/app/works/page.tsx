@@ -1,11 +1,20 @@
+import type { Metadata } from "next";
 import ITEMS, { ProjectType } from "@/data/projects";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Section } from "@/app/components/ProjectList";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Works",
   description: "Complete list of projects and experiments.",
+  openGraph: {
+    title: "Works | Gwendall",
+    description: "Complete list of projects and experiments.",
+  },
+  twitter: {
+    title: "Works | Gwendall",
+    description: "Complete list of projects and experiments.",
+  },
 };
 
 export default function Works() {
