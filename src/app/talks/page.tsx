@@ -6,14 +6,14 @@ import { Section } from "@/app/components/ProjectList";
 
 export const metadata: Metadata = {
   title: "Talks & Exhibitions",
-  description: "Selected talks and exhibitions.",
+  description: "All talks and exhibitions.",
   openGraph: {
     title: "Talks & Exhibitions | Gwendall",
-    description: "Selected talks and exhibitions.",
+    description: "All talks and exhibitions.",
   },
   twitter: {
     title: "Talks & Exhibitions | Gwendall",
-    description: "Selected talks and exhibitions.",
+    description: "All talks and exhibitions.",
   },
 };
 

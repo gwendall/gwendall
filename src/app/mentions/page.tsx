@@ -6,14 +6,14 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Mentions",
-  description: "Selected press, talks, and testimonials.",
+  description: "Press coverage and community feedback.",
   openGraph: {
     title: "Mentions | Gwendall",
-    description: "Selected press, talks, and testimonials.",
+    description: "Press coverage and community feedback.",
   },
   twitter: {
     title: "Mentions | Gwendall",
-    description: "Selected press, talks, and testimonials.",
+    description: "Press coverage and community feedback.",
   },
 };
 
