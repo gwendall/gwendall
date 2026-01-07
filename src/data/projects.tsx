@@ -85,15 +85,14 @@ const ITEMS: Project[] = [
     // Past Work
     {
         name: 'PUNK.CAM Virtual Camera',
-        url: 'https://punk.cam/extension',
+        url: 'https://chromewebstore.google.com/detail/punkcam-virtual-camera/iefgnpnmmdcegahdlcakfhmkdnedgkeh',
         logo: 'https://pbs.twimg.com/profile_images/1833456434182324224/UnK1Zn71_400x400.jpg',
-        description: 'Wearable digital avatars for video calls.',
+        description: 'Chrome extension to wear pixel art avatars during video calls. Real-time face tracking with MediaPipe.',
         tweets: [
             "https://x.com/gwendall/status/1877018396845383991",
         ],
-        type: ProjectType.PastWork,
-        date: new Date('2025-01-08'),
-        archived: true
+        type: ProjectType.OngoingExperiments,
+        date: new Date('2025-01-08')
     },
     {
         name: 'VibeWorld',
