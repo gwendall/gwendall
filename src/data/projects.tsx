@@ -358,6 +358,14 @@ const ITEMS: Project[] = [
         date: new Date('2023-05-25'),
         archived: true,
     },
+    {
+        name: 'Bring The Bird Back',
+        url: 'https://chromewebstore.google.com/detail/bring-the-bird-back/khmjbodjaafnkbmfnjcokflbohbfdoek',
+        description: 'Chrome extension to restore the Twitter bird logo.',
+        type: ProjectType.PastWork,
+        date: new Date('2023-07-25'),
+        archived: true,
+    },
 
     // Talks & Exhibitions
     {
