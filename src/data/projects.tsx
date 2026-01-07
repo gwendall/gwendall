@@ -84,10 +84,9 @@ const ITEMS: Project[] = [
 
     // Past Work
     {
-        name: 'PUNK.CAM Virtual Camera',
-        url: 'https://chromewebstore.google.com/detail/punkcam-virtual-camera/iefgnpnmmdcegahdlcakfhmkdnedgkeh',
-        logo: 'https://pbs.twimg.com/profile_images/1833456434182324224/UnK1Zn71_400x400.jpg',
-        description: 'Chrome extension to wear pixel art avatars during video calls. Real-time face tracking with MediaPipe.',
+        name: 'PFP Cam',
+        url: 'https://pfp.cam',
+        description: 'Virtual camera that lets you wear your digital identity on video calls.',
         tweets: [
             "https://x.com/gwendall/status/1877018396845383991",
         ],
