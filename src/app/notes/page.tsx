@@ -43,7 +43,7 @@ export default function Notes() {
             <div>
               <Link
                 href={`/notes/${note.slug}`}
-                className="font-bold text-foreground hover:text-link transition-colors"
+                className="font-bold text-link hover:underline transition-colors"
               >
                 {note.title}
               </Link>

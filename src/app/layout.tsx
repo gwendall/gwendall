@@ -100,6 +100,7 @@ export default function RootLayout({
           <Header />
           {children}
           <footer className="mt-12 text-foreground-muted">
+            <div className="mb-4">—</div>
             Gwendall - Crafting worlds since 2010.
           </footer>
         </main>
