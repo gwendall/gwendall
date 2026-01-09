@@ -45,7 +45,7 @@ export default function Home() {
           <section>
             <div className="flex items-center gap-2 mb-2">
               <div className="w-2.5 h-2.5 bg-foreground -translate-y-[0.5px]" aria-hidden="true" />
-              <h2 className="font-bold text-foreground tracking-wider uppercase">Some Notes</h2>
+              <h2 className="font-bold text-foreground tracking-wider uppercase">Latest Notes</h2>
             </div>
             <div className="mt-6 space-y-3">
               {latestNotes.map((note) => (

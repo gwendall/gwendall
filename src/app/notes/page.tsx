@@ -33,7 +33,7 @@ export default function Notes() {
   return (
     <>
       <div className="mb-4">
-        <h1 className="font-bold mb-2">NOTES</h1>
+        <h1 className="font-bold mb-2">SOME NOTES</h1>
         <p className="text-foreground-muted">Thoughts and reflections.</p>
       </div>
 
