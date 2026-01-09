@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-import { SITE_NAME, SITE_DESCRIPTION } from "@/data/constants";
+import { SITE_NAME, SITE_EMAIL, SITE_DESCRIPTION } from "@/data/constants";
 
 export function Header() {
   const pathname = usePathname();
@@ -50,10 +50,10 @@ export function Header() {
         </Link>
         , or email me at{" "}
         <a
-          href="mailto:hi@gwendall.com?subject=Hello"
+          href={`mailto:${SITE_EMAIL}?subject=Hello`}
           className="text-link hover:underline font-bold"
         >
-          hi@gwendall.com
+          {SITE_EMAIL}
         </a>.
       </p>
     </header>
