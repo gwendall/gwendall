@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { SITE_NAME, SITE_DESCRIPTION } from "@/data/constants";
 
 export function Header() {
   const pathname = usePathname();
@@ -27,11 +28,11 @@ export function Header() {
               }}
             />
           </span>
-          GWENDALL
+          {SITE_NAME.toUpperCase()}
         </Link>
       </h1>
       <p className="text-foreground-muted">
-        Builder & founder exploring embodied agents, spatial systems, and autonomous behavior. Find me on{" "}
+        {SITE_DESCRIPTION} Find me on{" "}
         <Link
           href="https://x.com/gwendall"
           target="_blank"
