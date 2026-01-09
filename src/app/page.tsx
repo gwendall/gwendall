@@ -1,18 +1,6 @@
-import type { Metadata } from "next";
 import ITEMS, { ProjectType, ProjectTypeLabels } from "@/data/projects";
 import NOTES from "@/data/notes";
 import { Section } from "./components/ProjectList";
-
-export const metadata: Metadata = {
-  openGraph: {
-    title: "Gwendall",
-    description: "Builder & founder exploring embodied agents, spatial systems, and autonomous behavior.",
-  },
-  twitter: {
-    title: "Gwendall",
-    description: "Builder & founder exploring embodied agents, spatial systems, and autonomous behavior.",
-  },
-};
 
 export default function Home() {
   const visibleItems = ITEMS.filter(item => !item.hidden && !item.archived);

@@ -9,7 +9,7 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default function Image() {
+export default async function Image() {
   return generateOGImage(
     { title: "Some Notes", subtitle: "Thoughts and reflections." },
     size

@@ -9,7 +9,7 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default function Image() {
+export default async function Image() {
   return generateOGImage(
     { title: "Talks & Exhibitions", subtitle: "Speaking about AI agents, avatars, and spatial systems." },
     size

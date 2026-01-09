@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "fs/promises";
+import { join } from "path";
 
 // Theme configuration - set to 'light' or 'dark'
 const THEME: "light" | "dark" = "dark";
@@ -17,6 +19,13 @@ const colors = {
   },
 };
 
+// Load Geist Mono font from node_modules
+async function loadGeistFont(filename: string): Promise<ArrayBuffer> {
+  const fontPath = join(process.cwd(), "node_modules", "geist", "dist", "fonts", "geist-mono", filename);
+  const buffer = await readFile(fontPath);
+  return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
+}
+
 interface OGImageOptions {
   width: number;
   height: number;
@@ -27,13 +36,19 @@ interface OGImageProps {
   subtitle?: string;
 }
 
-export function generateOGImage(
+export async function generateOGImage(
   props: OGImageProps,
   options: OGImageOptions
-): ImageResponse {
+): Promise<ImageResponse> {
   const { width, height } = options;
   const { title = "Gwendall", subtitle } = props;
   const theme = colors[THEME];
+
+  // Load fonts
+  const [fontRegular, fontBold] = await Promise.all([
+    loadGeistFont("GeistMono-Regular.ttf"),
+    loadGeistFont("GeistMono-Bold.ttf"),
+  ]);
 
   return new ImageResponse(
     (
@@ -46,7 +61,7 @@ export function generateOGImage(
           justifyContent: "center",
           padding: 80,
           background: theme.background,
-          fontFamily: "system-ui, -apple-system, sans-serif",
+          fontFamily: "Geist Mono",
         }}
       >
         {/* Title */}
@@ -55,7 +70,7 @@ export function generateOGImage(
             display: "flex",
             color: theme.foreground,
             fontSize: 72,
-            fontWeight: 800,
+            fontWeight: 700,
             lineHeight: 1.2,
             marginBottom: 24,
           }}
@@ -69,6 +84,7 @@ export function generateOGImage(
             display: "flex",
             color: theme.muted,
             fontSize: 32,
+            fontWeight: 400,
             lineHeight: 1.4,
             maxWidth: 900,
           }}
@@ -80,6 +96,20 @@ export function generateOGImage(
     {
       width,
       height,
+      fonts: [
+        {
+          name: "Geist Mono",
+          data: fontRegular,
+          style: "normal",
+          weight: 400,
+        },
+        {
+          name: "Geist Mono",
+          data: fontBold,
+          style: "normal",
+          weight: 700,
+        },
+      ],
     }
   );
 }

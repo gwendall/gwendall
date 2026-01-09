@@ -7,14 +7,6 @@ import { ArrowUpRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Mentions",
   description: "Press coverage and community feedback.",
-  openGraph: {
-    title: "Mentions | Gwendall",
-    description: "Press coverage and community feedback.",
-  },
-  twitter: {
-    title: "Mentions | Gwendall",
-    description: "Press coverage and community feedback.",
-  },
 };
 
 function MentionItem({ item }: { item: Mention }) {

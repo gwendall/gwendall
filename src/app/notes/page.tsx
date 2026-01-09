@@ -5,14 +5,6 @@ import { NoteList } from "@/app/components/ProjectList";
 export const metadata: Metadata = {
   title: "Notes",
   description: "Thoughts and reflections.",
-  openGraph: {
-    title: "Notes | Gwendall",
-    description: "Thoughts and reflections.",
-  },
-  twitter: {
-    title: "Notes | Gwendall",
-    description: "Thoughts and reflections.",
-  },
 };
 
 export default function Notes() {

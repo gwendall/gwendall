@@ -5,14 +5,6 @@ import { Section } from "@/app/components/ProjectList";
 export const metadata: Metadata = {
   title: "Talks & Exhibitions",
   description: "All talks and exhibitions.",
-  openGraph: {
-    title: "Talks & Exhibitions | Gwendall",
-    description: "All talks and exhibitions.",
-  },
-  twitter: {
-    title: "Talks & Exhibitions | Gwendall",
-    description: "All talks and exhibitions.",
-  },
 };
 
 export default function Talks() {
