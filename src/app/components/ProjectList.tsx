@@ -1,6 +1,20 @@
 import { Project } from "@/data/projects";
+import { Note } from "@/data/notes";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+
+// Minimum number of items to show "View All" link
+export const VIEW_ALL_THRESHOLD = 10;
+
+function formatDate(date: Date): string {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  })
+    .format(date)
+    .toUpperCase();
+}
 
 export function ProjectList({ items }: { items: Project[] }) {
   if (items.length === 0) return null;
@@ -68,9 +82,49 @@ export function ProjectList({ items }: { items: Project[] }) {
   );
 }
 
-export function Section({ title, items, description }: { title: string; items: Project[]; description?: string }) {
-  // Items filtering is now handled by the caller or within the list component if needed
+export function NoteList({ items, clampDescription = false }: { items: Note[]; clampDescription?: boolean }) {
   if (items.length === 0) return null;
+
+  return (
+    <ul className="space-y-3">
+      {items.sort((a, b) => b.date.getTime() - a.date.getTime()).map((note) => (
+        <li key={note.slug}>
+          <div>
+            <Link 
+              href={`/notes/${note.slug}`}
+              className="font-bold text-link hover:underline transition-colors"
+            >
+              {note.title}
+            </Link>
+            <span className="text-foreground-faint text-sm ml-2">
+              {formatDate(note.date)}
+            </span>
+          </div>
+          <p className={`text-foreground-muted ${clampDescription ? 'truncate' : ''}`}>
+            {note.body.replace(/\n/g, ' ').slice(0, 200)}
+          </p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+interface SectionProps {
+  title: string;
+  items?: Project[];
+  notes?: Note[];
+  description?: string;
+  viewAllLabel?: string;
+  viewAllHref?: string;
+  totalCount?: number;
+  clampDescription?: boolean;
+}
+
+export function Section({ title, items, notes, description, viewAllLabel, viewAllHref, totalCount, clampDescription = false }: SectionProps) {
+  const hasContent = (items && items.length > 0) || (notes && notes.length > 0);
+  if (!hasContent) return null;
+
+  const showViewAll = viewAllLabel && viewAllHref && (totalCount ?? 0) >= VIEW_ALL_THRESHOLD;
 
   return (
     <section>
@@ -82,8 +136,16 @@ export function Section({ title, items, description }: { title: string; items: P
         <p className="text-foreground-muted mb-6">{description}</p>
       )}
       <div className={description ? "" : "mt-6"}>
-        <ProjectList items={items} />
+        {items && <ProjectList items={items} />}
+        {notes && <NoteList items={notes} clampDescription={clampDescription} />}
       </div>
+      {showViewAll && (
+        <div className="text-foreground-muted mt-6 flex gap-6">
+          <Link href={viewAllHref} className="inline-flex items-center gap-1 hover:text-foreground hover:underline">
+            {viewAllLabel} <ArrowRight size={14} aria-hidden="true" focusable={false} />
+          </Link>
+        </div>
+      )}
     </section>
   );
 }
