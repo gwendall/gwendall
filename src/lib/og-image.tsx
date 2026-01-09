@@ -5,6 +5,9 @@ import { join } from "path";
 // Theme configuration - set to 'light' or 'dark'
 const THEME: "light" | "dark" = "dark";
 
+// Font size for title and subtitle
+const FONT_SIZE = 84;
+
 // Colors matching the site's CSS variables
 const colors = {
   light: {
@@ -69,10 +72,10 @@ export async function generateOGImage(
           style={{
             display: "flex",
             color: theme.foreground,
-            fontSize: 72,
+            fontSize: FONT_SIZE,
             fontWeight: 700,
             lineHeight: 1.2,
-            marginBottom: 24,
+            marginBottom: 32,
           }}
         >
           {title}
@@ -83,10 +86,10 @@ export async function generateOGImage(
           style={{
             display: "flex",
             color: theme.muted,
-            fontSize: 32,
+            fontSize: FONT_SIZE,
             fontWeight: 400,
-            lineHeight: 1.4,
-            maxWidth: 900,
+            lineHeight: 1.2,
+            maxWidth: 1000,
           }}
         >
           {subtitle ?? "Gwendall"}
