@@ -5,8 +5,27 @@ import { join } from "path";
 // Theme configuration - set to 'light' or 'dark'
 const THEME: "light" | "dark" = "dark";
 
-// Font size for title and subtitle
-const FONT_SIZE = 84;
+// Font sizes
+const TITLE_FONT_SIZE = 84;
+const MAX_SUBTITLE_WIDTH = 1040; // 1200 - 80*2 padding
+const MAX_SUBTITLE_LINES = 2;
+
+// Calculate subtitle font size to fit in 2 lines max
+function getSubtitleFontSize(text: string): number {
+  const charWidth = 0.6; // approximate char width ratio for monospace
+  const maxCharsPerLine = MAX_SUBTITLE_WIDTH / (TITLE_FONT_SIZE * charWidth);
+  const totalChars = text.length;
+  const linesNeeded = totalChars / maxCharsPerLine;
+  
+  if (linesNeeded <= MAX_SUBTITLE_LINES) {
+    return TITLE_FONT_SIZE;
+  }
+  
+  // Scale down to fit in 2 lines
+  const scaleFactor = MAX_SUBTITLE_LINES / linesNeeded;
+  const newSize = Math.floor(TITLE_FONT_SIZE * scaleFactor);
+  return Math.max(newSize, 36); // minimum 36px
+}
 
 // Colors matching the site's CSS variables
 const colors = {
@@ -46,6 +65,8 @@ export async function generateOGImage(
   const { width, height } = options;
   const { title = "Gwendall", subtitle } = props;
   const theme = colors[THEME];
+  const subtitleText = subtitle ?? "Gwendall";
+  const subtitleFontSize = getSubtitleFontSize(subtitleText);
 
   // Load fonts
   const [fontRegular, fontBold] = await Promise.all([
@@ -72,7 +93,7 @@ export async function generateOGImage(
           style={{
             display: "flex",
             color: theme.foreground,
-            fontSize: FONT_SIZE,
+            fontSize: TITLE_FONT_SIZE,
             fontWeight: 700,
             lineHeight: 1.2,
             marginBottom: 32,
@@ -86,13 +107,13 @@ export async function generateOGImage(
           style={{
             display: "flex",
             color: theme.muted,
-            fontSize: FONT_SIZE,
+            fontSize: subtitleFontSize,
             fontWeight: 400,
-            lineHeight: 1.2,
-            maxWidth: 1000,
+            lineHeight: 1.3,
+            maxWidth: MAX_SUBTITLE_WIDTH,
           }}
         >
-          {subtitle ?? "Gwendall"}
+          {subtitleText}
         </div>
       </div>
     ),
