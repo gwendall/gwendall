@@ -1,7 +1,7 @@
 import { generateOGImage } from "@/lib/og-image";
 import { SITE_NAME, SITE_DESCRIPTION } from "@/data/constants";
 
-export const dynamic = "force-static";
+export const runtime = "nodejs";
 
 // OpenGraph image - standard size
 export const size = {

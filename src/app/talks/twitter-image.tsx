@@ -1,6 +1,6 @@
 import { generateOGImage } from "@/lib/og-image";
 
-export const dynamic = "force-static";
+export const runtime = "nodejs";
 
 export const size = {
   width: 1200,

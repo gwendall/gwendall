@@ -1,7 +1,7 @@
 import { generateOGImage } from "@/lib/og-image";
 import NOTES from "@/data/notes";
 
-export const dynamic = "force-static";
+export const runtime = "nodejs";
 
 // Twitter card image - same as OG for summary_large_image
 export const size = {

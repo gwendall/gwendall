@@ -1,6 +1,4 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "fs/promises";
-import { join } from "path";
 
 // Theme configuration - set to 'light' or 'dark'
 const THEME: "light" | "dark" = "dark";
@@ -9,6 +7,9 @@ const THEME: "light" | "dark" = "dark";
 const TITLE_FONT_SIZE = 84;
 const MAX_SUBTITLE_WIDTH = 1040; // 1200 - 80*2 padding
 const MAX_SUBTITLE_LINES = 2;
+
+// System monospace font stack (no custom font loading needed)
+const FONT_FAMILY = 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace';
 
 // Calculate subtitle font size to fit in 2 lines max
 function getSubtitleFontSize(text: string): number {
@@ -41,13 +42,6 @@ const colors = {
   },
 };
 
-// Load Geist Mono font from node_modules
-async function loadGeistFont(filename: string): Promise<ArrayBuffer> {
-  const fontPath = join(process.cwd(), "node_modules", "geist", "dist", "fonts", "geist-mono", filename);
-  const buffer = await readFile(fontPath);
-  return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
-}
-
 interface OGImageOptions {
   width: number;
   height: number;
@@ -68,12 +62,6 @@ export async function generateOGImage(
   const subtitleText = subtitle ?? "Gwendall";
   const subtitleFontSize = getSubtitleFontSize(subtitleText);
 
-  // Load fonts
-  const [fontRegular, fontBold] = await Promise.all([
-    loadGeistFont("GeistMono-Regular.ttf"),
-    loadGeistFont("GeistMono-Bold.ttf"),
-  ]);
-
   return new ImageResponse(
     (
       <div
@@ -85,7 +73,7 @@ export async function generateOGImage(
           justifyContent: "center",
           padding: 80,
           background: theme.background,
-          fontFamily: "Geist Mono",
+          fontFamily: FONT_FAMILY,
         }}
       >
         {/* Title */}
@@ -120,20 +108,6 @@ export async function generateOGImage(
     {
       width,
       height,
-      fonts: [
-        {
-          name: "Geist Mono",
-          data: fontRegular,
-          style: "normal",
-          weight: 400,
-        },
-        {
-          name: "Geist Mono",
-          data: fontBold,
-          style: "normal",
-          weight: 700,
-        },
-      ],
     }
   );
 }
