@@ -64,7 +64,7 @@ export default async function NotePage({ params }: Props) {
             {formatDate(note.date)}
           </time>
         </div>
-        <div className="text-foreground-muted prose-minimal">
+        <div className="text-foreground prose-minimal">
           <Markdown>{note.body}</Markdown>
         </div>
       </article>
