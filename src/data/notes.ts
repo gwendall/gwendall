@@ -8,6 +8,7 @@ export type Note = {
   body: string;
   date: Date;
   hidden?: boolean;
+  tweetId?: string;
 };
 
 const notesDirectory = path.join(process.cwd(), "content/notes");
@@ -29,6 +30,7 @@ function getNotes(): Note[] {
         body: content.trim(),
         date: new Date(data.date),
         hidden: data.hidden ?? false,
+        tweetId: data.tweetId,
       };
     });
 

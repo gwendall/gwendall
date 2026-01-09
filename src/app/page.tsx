@@ -8,7 +8,7 @@ export default function Home() {
   const currentWork = visibleItems.filter(item => item.type === ProjectType.CurrentWork);
   const ongoingExperiments = visibleItems.filter(item => item.type === ProjectType.OngoingExperiments);
   const pastWork = visibleItems.filter(item => item.type === ProjectType.PastWork);
-  const talksAndExhibitions = visibleItems.filter(item => item.type === ProjectType.Talk || item.type === ProjectType.Exhibition);
+  const talksAndExhibitions = ITEMS.filter(item => [ProjectType.Talk, ProjectType.Exhibition].includes(item.type));
 
   const allNotes = NOTES.filter(n => !n.hidden);
   const latestNotes = allNotes
@@ -42,7 +42,7 @@ export default function Home() {
           title="Selected Talks & Exhibitions" 
           items={talksAndExhibitions} 
           description="I regularly speak about AI agents, avatars, and the convergence of physical and digital systems."
-          viewAllLabel="View All Talks"
+          viewAllLabel="View All Talks & Exhibitions"
           viewAllHref="/talks"
           totalCount={talksAndExhibitions.length}
         />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import NOTES from "@/data/notes";
 import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
+import { ArrowRight } from "lucide-react";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -37,7 +38,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function formatDate(date: Date): string {
   return new Intl.DateTimeFormat("en-US", {
     month: "short",
-    day: "numeric",
     year: "numeric",
   })
     .format(date)
@@ -64,6 +64,19 @@ export default async function NotePage({ params }: Props) {
         <div className="text-foreground prose-minimal">
           <Markdown>{note.body}</Markdown>
         </div>
+        {note.tweetId && (
+          <div className="mt-8 mb-[-24px]">
+            <a
+              href={`https://x.com/gwendall/status/${note.tweetId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-foreground-muted hover:text-foreground transition-colors"
+            >
+              Discuss on X
+              <ArrowRight size={16} />
+            </a>
+          </div>
+        )}
       </article>
     </>
   );

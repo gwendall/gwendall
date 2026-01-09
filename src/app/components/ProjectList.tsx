@@ -9,7 +9,6 @@ export const VIEW_ALL_THRESHOLD = 10;
 function formatDate(date: Date): string {
   return new Intl.DateTimeFormat("en-US", {
     month: "short",
-    day: "numeric",
     year: "numeric",
   })
     .format(date)
@@ -118,13 +117,14 @@ interface SectionProps {
   viewAllHref?: string;
   totalCount?: number;
   clampDescription?: boolean;
+  forceViewAll?: boolean;
 }
 
-export function Section({ title, items, notes, description, viewAllLabel, viewAllHref, totalCount, clampDescription = false }: SectionProps) {
+export function Section({ title, items, notes, description, viewAllLabel, viewAllHref, totalCount, clampDescription = false, forceViewAll = false }: SectionProps) {
   const hasContent = (items && items.length > 0) || (notes && notes.length > 0);
   if (!hasContent) return null;
 
-  const showViewAll = viewAllLabel && viewAllHref && (totalCount ?? 0) >= VIEW_ALL_THRESHOLD;
+  const showViewAll = viewAllLabel && viewAllHref && (forceViewAll || (totalCount ?? 0) >= VIEW_ALL_THRESHOLD);
 
   return (
     <section>
