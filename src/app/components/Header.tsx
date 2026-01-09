@@ -12,7 +12,7 @@ export function Header() {
   return (
     <header className="mb-12">
       <h1 className="font-bold mb-3">
-        <Link href="/" className="inline-flex items-center">
+        <Link href="/" className="group inline-flex items-center">
           <span 
             className="inline-flex items-center overflow-hidden transition-all duration-300 ease-out"
             style={{ width: isHome ? 0 : 24 }}
@@ -28,7 +28,7 @@ export function Header() {
               }}
             />
           </span>
-          {SITE_NAME.toUpperCase()}
+          <span className="group-hover:underline">{SITE_NAME.toUpperCase()}</span>
         </Link>
       </h1>
       <p className="text-foreground-muted">
