@@ -3,14 +3,18 @@ import NOTES from "@/data/notes";
 import { Section } from "./components/ProjectList";
 
 export default function Home() {
+  // All items by type (for totalCount)
+  const allNotes = NOTES.filter(n => !n.hidden);
+  const allWorks = ITEMS.filter(item => !item.hidden && [ProjectType.CurrentWork, ProjectType.OngoingExperiments, ProjectType.PastWork].includes(item.type));
+  const allTalks = ITEMS.filter(item => !item.hidden && [ProjectType.Talk, ProjectType.Exhibition].includes(item.type));
+
+  // Visible items on landing (filtered by !archived)
   const visibleItems = ITEMS.filter(item => !item.hidden && !item.archived);
-  
   const currentWork = visibleItems.filter(item => item.type === ProjectType.CurrentWork);
   const ongoingExperiments = visibleItems.filter(item => item.type === ProjectType.OngoingExperiments);
   const pastWork = visibleItems.filter(item => item.type === ProjectType.PastWork);
-  const talksAndExhibitions = ITEMS.filter(item => [ProjectType.Talk, ProjectType.Exhibition].includes(item.type));
+  const talksAndExhibitions = visibleItems.filter(item => [ProjectType.Talk, ProjectType.Exhibition].includes(item.type));
 
-  const allNotes = NOTES.filter(n => !n.hidden);
   const latestNotes = allNotes
     .sort((a, b) => b.date.getTime() - a.date.getTime())
     .slice(0, 3);
@@ -27,15 +31,21 @@ export default function Home() {
           clampDescription
         />
 
-        <Section title={ProjectTypeLabels[ProjectType.CurrentWork]} items={currentWork} />
-        <Section title={ProjectTypeLabels[ProjectType.OngoingExperiments]} items={ongoingExperiments} />
+        <Section 
+          title={ProjectTypeLabels[ProjectType.CurrentWork]} 
+          items={currentWork} 
+        />
+        <Section 
+          title={ProjectTypeLabels[ProjectType.OngoingExperiments]} 
+          items={ongoingExperiments} 
+        />
         
         <Section 
           title={ProjectTypeLabels[ProjectType.PastWork]} 
           items={pastWork}
           viewAllLabel="View All Works"
           viewAllHref="/works"
-          totalCount={visibleItems.filter(item => item.type !== ProjectType.Talk && item.type !== ProjectType.Exhibition).length}
+          totalCount={allWorks.length}
         />
 
         <Section 
@@ -44,7 +54,7 @@ export default function Home() {
           description="I regularly speak about AI agents, avatars, and the convergence of physical and digital systems."
           viewAllLabel="View All Talks & Exhibitions"
           viewAllHref="/talks"
-          totalCount={talksAndExhibitions.length}
+          totalCount={allTalks.length}
         />
       </div>
     </>
