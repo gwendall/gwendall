@@ -11,7 +11,7 @@ export const contentType = "image/png";
 
 export default function Image() {
   return generateOGImage(
-    { title: "Notes", subtitle: "Thoughts and reflections." },
+    { title: "Some Notes", subtitle: "Thoughts and reflections." },
     size
   );
 }
