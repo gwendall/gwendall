@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Header } from "./components/Header";
-import { SITE_NAME, SITE_DESCRIPTION } from "@/data/constants";
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/data/constants";
 
 export const dynamic = 'force-static';
 
@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.gwendall.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}`,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
   openGraph: {
-    url: "https://www.gwendall.com",
+    url: SITE_URL,
     siteName: SITE_NAME,
     locale: "en_US",
     type: "website",

@@ -1,11 +1,12 @@
 import { MetadataRoute } from 'next'
 import NOTES from '@/data/notes'
+import { SITE_URL } from '@/data/constants'
 
 export const dynamic = 'force-static';
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const notePages = NOTES.filter(n => !n.hidden).map(note => ({
-    url: `https://gwendall.com/notes/${note.slug}`,
+    url: `${SITE_URL}/notes/${note.slug}`,
     lastModified: note.date,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -13,31 +14,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: 'https://gwendall.com',
+      url: SITE_URL,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: 'https://gwendall.com/works',
+      url: `${SITE_URL}/works`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://gwendall.com/talks',
+      url: `${SITE_URL}/talks`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://gwendall.com/mentions',
+      url: `${SITE_URL}/mentions`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://gwendall.com/notes',
+      url: `${SITE_URL}/notes`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
