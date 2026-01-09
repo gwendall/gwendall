@@ -68,10 +68,10 @@ main {
 /* Base font-size for mobile (and anything < lg). */
 html { font-size: 15px; }
 
-/* Desktop: back to the tighter original sizing. */
+/* Desktop: slightly larger than before */
 @media (min-width: 1024px) {
   html {
-    font-size: 13px;
+    font-size: 14px;
     --body-leading: 1.5;
     --content-leading: 1.55; /* tighter on desktop */
   }
