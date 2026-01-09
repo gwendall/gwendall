@@ -13,6 +13,11 @@ export async function generateStaticParams() {
   }));
 }
 
+// Remove trailing punctuation for cleaner meta titles (before "| Gwendall")
+function cleanTitleForMeta(title: string): string {
+  return title.replace(/[.!?]+$/, "");
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const note = NOTES.find((n) => n.slug === slug && !n.hidden);
@@ -24,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: note.title,
+    title: cleanTitleForMeta(note.title),
     description: note.body.slice(0, 160),
   };
 }

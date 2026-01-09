@@ -59,8 +59,7 @@ export async function generateOGImage(
   const { width, height } = options;
   const { title = "Gwendall", subtitle } = props;
   const theme = colors[THEME];
-  const subtitleText = subtitle ?? "Gwendall";
-  const subtitleFontSize = getSubtitleFontSize(subtitleText);
+  const subtitleFontSize = subtitle ? getSubtitleFontSize(subtitle) : TITLE_FONT_SIZE;
 
   return new ImageResponse(
     (
@@ -84,25 +83,27 @@ export async function generateOGImage(
             fontSize: TITLE_FONT_SIZE,
             fontWeight: 700,
             lineHeight: 1.2,
-            marginBottom: 32,
+            marginBottom: subtitle ? 32 : 0,
           }}
         >
           {title}
         </div>
         
-        {/* Subtitle */}
-        <div
-          style={{
-            display: "flex",
-            color: theme.muted,
-            fontSize: subtitleFontSize,
-            fontWeight: 400,
-            lineHeight: 1.3,
-            maxWidth: MAX_SUBTITLE_WIDTH,
-          }}
-        >
-          {subtitleText}
-        </div>
+        {/* Subtitle - only if provided */}
+        {subtitle && (
+          <div
+            style={{
+              display: "flex",
+              color: theme.muted,
+              fontSize: subtitleFontSize,
+              fontWeight: 400,
+              lineHeight: 1.3,
+              maxWidth: MAX_SUBTITLE_WIDTH,
+            }}
+          >
+            {subtitle}
+          </div>
+        )}
       </div>
     ),
     {
