@@ -3,6 +3,9 @@ import NOTES from "@/data/notes";
 
 export const dynamic = "force-static";
 
+// Return 404 for slugs not in generateStaticParams
+export const dynamicParams = false;
+
 // OpenGraph image - standard size
 export const size = {
   width: 1200,
