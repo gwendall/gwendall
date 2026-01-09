@@ -3,9 +3,6 @@ import NOTES from "@/data/notes";
 
 export const dynamic = "force-static";
 
-// Return 404 for slugs not in generateStaticParams
-export const dynamicParams = false;
-
 // Twitter card image - same as OG for summary_large_image
 export const size = {
   width: 1200,

@@ -7,9 +7,6 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-// Return 404 for slugs not in generateStaticParams
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
   return NOTES.filter((n) => !n.hidden).map((note) => ({
     slug: note.slug,
