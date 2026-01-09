@@ -82,3 +82,62 @@ html { font-size: 15px; }
 .preload-transitions * {
   transition: none !important;
 }
+
+/* Minimal prose styling for markdown notes */
+.prose-minimal p {
+  margin-bottom: 1em;
+}
+
+.prose-minimal p:last-child {
+  margin-bottom: 0;
+}
+
+.prose-minimal strong {
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.prose-minimal em {
+  font-style: italic;
+}
+
+.prose-minimal a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.prose-minimal a:hover {
+  text-decoration: none;
+}
+
+.prose-minimal code {
+  background: color-mix(in srgb, var(--foreground) 8%, transparent);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.prose-minimal blockquote {
+  border-left: 2px solid var(--foreground-faint);
+  padding-left: 1em;
+  margin: 1em 0;
+  color: var(--foreground-muted);
+}
+
+.prose-minimal ul,
+.prose-minimal ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.prose-minimal li {
+  margin-bottom: 0.25em;
+}
+
+/* Line clamp utility for note previews */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeToggle } from "./components/ThemeToggle";
-import Link from "next/link";
+import { Header } from "./components/Header";
 
 export const dynamic = 'force-static';
 
@@ -96,34 +96,7 @@ export default function RootLayout({
         />
         <ThemeToggle />
         <main role="main" className="min-h-screen max-w-2xl mx-auto px-6 py-8 font-mono">
-          <header className="mb-12">
-            <h1 className="font-bold mb-3">GWENDALL</h1>
-            <p className="text-foreground-muted">
-              Builder & founder exploring embodied agents, spatial systems, and autonomous behavior. Find me on{" "}
-              <Link
-                href="https://x.com/gwendall"
-                target="_blank"
-                className="text-link hover:underline font-bold"
-              >
-                X
-              </Link>{" "}
-              or{" "}
-              <Link
-                href="https://github.com/gwendall"
-                target="_blank"
-                className="text-link hover:underline font-bold"
-              >
-                Github
-              </Link>
-              , or email me at{" "}
-              <a
-                href="mailto:hi@gwendall.com?subject=Hello"
-                className="text-link hover:underline font-bold"
-              >
-                hi@gwendall.com
-              </a>.
-            </p>
-          </header>
+          <Header />
           {children}
           <footer className="mt-12 text-foreground-muted">
             Gwendall - Crafting worlds since 2010.
