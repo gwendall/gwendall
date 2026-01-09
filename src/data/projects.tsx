@@ -84,7 +84,7 @@ const ITEMS: Project[] = [
 
     // Past Work
     {
-        name: 'PFP Cam',
+        name: 'PFP.CAM',
         url: 'https://pfp.cam',
         description: 'Virtual camera that lets you wear your digital identity on video calls.',
         tweets: [
