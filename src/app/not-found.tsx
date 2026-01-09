@@ -14,8 +14,6 @@ export default function NotFound() {
         </p>
       </div>
 
-      <div className="text-foreground-muted">—</div>
-
       <Link 
         href="/" 
         className="text-link hover:underline transition-colors"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Error({
   error,
@@ -26,14 +27,21 @@ export default function Error({
         </p>
       </div>
 
-      <div className="text-foreground-muted">—</div>
-
-      <button
-        onClick={() => reset()}
-        className="text-link hover:underline transition-colors text-left"
-      >
-        Try again
-      </button>
+      <div>
+        <button
+          onClick={() => reset()}
+          className="text-link hover:underline transition-colors cursor-pointer"
+        >
+          Try again
+        </button>
+        {" "}or{" "}
+        <Link 
+          href="/" 
+          className="text-link hover:underline transition-colors"
+        >
+          go back home
+        </Link>
+      </div>
     </div>
   );
 }
