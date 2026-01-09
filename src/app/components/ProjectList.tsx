@@ -92,11 +92,11 @@ export function NoteList({ items, clampDescription = false }: { items: Note[]; c
           <div>
             <Link 
               href={`/notes/${note.slug}`}
-              className="font-bold text-link hover:underline transition-colors"
+              className="font-bold text-link hover:underline transition-colors mr-3"
             >
               {note.title}
             </Link>
-            <span className="text-foreground-faint text-sm ml-2">
+            <span className="text-foreground-muted tabular-nums whitespace-nowrap">
               {formatDate(note.date)}
             </span>
           </div>

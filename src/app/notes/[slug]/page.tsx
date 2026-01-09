@@ -60,7 +60,7 @@ export default async function NotePage({ params }: Props) {
       <article>
         <div className="mb-6">
           <h1 className="font-bold text-foreground">{note.title}</h1>
-          <time className="text-foreground-faint text-sm">
+          <time className="text-foreground-muted">
             {formatDate(note.date)}
           </time>
         </div>
