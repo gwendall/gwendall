@@ -67,7 +67,7 @@ export function ProjectList({ items }: { items: Project[] }) {
                   title="View Tweet (opens in a new tab)"
                   aria-label="View Tweet (opens in a new tab)"
                 >
-                  <FaXTwitter size={13} aria-hidden="true" className="-translate-y-[2px]" />
+                  <FaXTwitter size={13} aria-hidden="true" className="-translate-y-[1.5px]" />
                 </Link>
               )}
             </div>
