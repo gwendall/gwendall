@@ -63,11 +63,11 @@ export function ProjectList({ items }: { items: Project[] }) {
                   href={item.tweets[0]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center ml-1.5 p-1 -m-1 text-foreground-muted hover:text-foreground transition-colors align-middle"
+                  className="inline-flex items-center justify-center ml-1 p-1 -m-1 text-foreground-muted hover:text-foreground transition-colors align-middle"
                   title="View Tweet (opens in a new tab)"
                   aria-label="View Tweet (opens in a new tab)"
                 >
-                  <FaXTwitter size={13} aria-hidden="true" className="-translate-y-[1.5px]" />
+                  <FaXTwitter size={12.5} aria-hidden="true" className="-translate-y-[1.5px]" />
                 </Link>
               )}
             </div>
