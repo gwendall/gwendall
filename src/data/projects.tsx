@@ -372,6 +372,9 @@ const ITEMS: Project[] = [
         name: 'Bring The Bird Back',
         url: 'https://chromewebstore.google.com/detail/bring-the-bird-back/khmjbodjaafnkbmfnjcokflbohbfdoek',
         description: 'Chrome extension to restore the Twitter bird logo.',
+        tweets: [
+            'https://www.youtube.com/watch?v=u96XIEUe4as'
+        ],
         type: ProjectType.PastWork,
         date: new Date('2023-07-25'),
         archived: true,
