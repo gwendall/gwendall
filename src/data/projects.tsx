@@ -97,11 +97,23 @@ const ITEMS: Project[] = [
         name: 'VibeWorld',
         url: 'https://vibeworld.co',
         description: 'Persistent multiplayer world engine (web-based).',
+        // tweets: [
+        //     "https://x.com/gwendall/status/1905662132915490850"
+        // ],
+        type: ProjectType.OngoingExperiments,
+        date: new Date('2025-06-01'),
+        archived: true
+    },
+    {
+        name: 'VibeHouse',
+        url: 'https://vibeworld.co/arcade',
+        description: 'A 3D virtual arcade room for vibe-coded games.',
         tweets: [
             "https://x.com/gwendall/status/1905662132915490850"
         ],
         type: ProjectType.OngoingExperiments,
-        date: new Date('2025-03-01')
+        date: new Date('2025-03-28'),
+        archived: true
     },
     {
         name: 'Nexus.JS',
