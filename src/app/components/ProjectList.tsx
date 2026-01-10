@@ -1,7 +1,8 @@
 import { Project } from "@/data/projects";
 import { Note } from "@/data/notes";
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 
 // Minimum number of items to show "View All" link
 export const VIEW_ALL_THRESHOLD = 10;
@@ -62,11 +63,11 @@ export function ProjectList({ items }: { items: Project[] }) {
                   href={item.tweets[0]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center ml-2 p-1 -m-1 text-foreground-muted hover:text-foreground transition-colors align-middle"
+                  className="inline-flex items-center justify-center ml-1.5 p-1 -m-1 text-foreground-muted hover:text-foreground transition-colors align-middle"
                   title="View Tweet (opens in a new tab)"
                   aria-label="View Tweet (opens in a new tab)"
                 >
-                  <ArrowUpRight size={16} aria-hidden="true" focusable={false} />
+                  <FaXTwitter size={13} aria-hidden="true" className="-translate-y-[2px]" />
                 </Link>
               )}
             </div>
