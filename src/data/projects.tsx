@@ -51,7 +51,7 @@ const ITEMS: Project[] = [
     {
         name: 'meeb.cam',
         url: 'https://meeb.cam',
-        description: 'Digital avatar studio.',
+        description: 'Creative suite for digital characters (3D studio tools, animation systems, AR experiences).',
         type: ProjectType.OngoingExperiments,
         date: new Date('2025-02-01'),
         tweets: [
