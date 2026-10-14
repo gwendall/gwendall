@@ -2,13 +2,13 @@
 
 I build weird things across games, robots and agents.
 
-Right now I'm taking classic games apart and re-rendering them in new ways: in VR,
-for AI agents, and by a fruit fly brain.
+Right now that means classic games, played in new ways: in mixed reality, alongside
+AI agents, and by a fruit fly brain.
 
 ## Now
 
+- [**Multitap**](https://multitap.gg) - the games you know, like you've never played them. Here's [what it looks like](https://x.com/gwendall/status/2105796481366266100). The early access list is open.
 - [**Kami Robotics**](https://kamirobotics.com) - one mind, any body: the layer that makes an agent present and alive, on a screen, a robot or an object.
-- [**Re-rendered**](https://x.com/gwendall/status/2105796481366266100) - classic console games rebuilt in 3D from the console's own video chip, played in mixed reality on Quest 3. Not public yet.
 - [**Flycade**](https://flycade.com) - a fruit fly brain learns to play Street Fighter II, on an arcade cabinet, live in your browser.
 - [**Le Cercle**](https://cercle.gg) - play a game, plug in an agent: sixteen browser games where people and agents play the same matches through one API.
 - [**thenwhat.tv**](https://thenwhat.tv) - interactive generative TV: the room pitches what happens next, the top idea becomes the next scene.
